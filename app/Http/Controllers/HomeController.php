@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile\CandidateAppliedJob;
+use App\Models\Profile\CandidatePersonal;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users= User::query()->count();
+        $profiles = CandidatePersonal::query()->count();
+        $applications = CandidateAppliedJob::query()->count();
+
+        return view('home',compact('users','profiles','applications'));
+
+//        return view('dashboard',compact('users','profiles','applications'));
     }
 }
