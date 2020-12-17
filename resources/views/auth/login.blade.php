@@ -8,14 +8,13 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>NGB Career - Admin Dashboard</title>
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="beauty/css/app.min.css">
-    <link rel="stylesheet" href="beauty/bundles/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="{!! asset('beauty/css/app.min.css') !!}">
     <!-- Template CSS -->
-    <link rel="stylesheet" href="beauty/css/style.css">
-    <link rel="stylesheet" href="beauty/css/components.css">
+    <link rel="stylesheet" href="{!! asset('beauty/css/style.css') !!}">
+    <link rel="stylesheet" href="{!! asset('beauty/css/components.css') !!}">
     <!-- Custom style CSS -->
-    <link rel="stylesheet" href="beauty/css/custom.css">
-    <link rel='shortcut icon' type='image/x-icon' href='beauty/img/favicon.ico' />
+    <link rel="stylesheet" href="{!! asset('beauty/css/custom.css') !!}">
+    <link rel='shortcut icon' type='image/x-icon' href="{!! asset('beauty/img/favicon.ico') !!}" />
 </head>
 
 <body>
@@ -39,10 +38,10 @@
                             <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="name">Email</label>
-                                    <input id="name" type="text" class="form-control" name="name" tabindex="1" required autofocus>
+                                    <label for="name">User Name</label>
+                                    <input id="name" type="text" class="form-control" name="name" tabindex="1" required>
                                     <div class="invalid-feedback">
-                                        Please fill in your email
+                                        Please fill in your user name
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -73,15 +72,16 @@
                 </div>
             </div>
         </div>
+        @include('partials.error-msg')
     </section>
 </div>
 <!-- General JS Scripts -->
-<script src="beauty/js/app.min.js"></script>
+<script src="{!! asset('beauty/js/app.min.js') !!}"></script>
 <!-- JS Libraies -->
 <!-- Page Specific JS File -->
 <!-- Template JS File -->
-<script src="beauty/js/scripts.js"></script>
+<script src="{!! asset('beauty/js/scripts.js') !!}"></script>
 <!-- Custom JS File -->
-<script src="beauty/js/custom.js"></script>
+<script src="{!! asset('beauty/js/custom.js') !!}"></script>
 </body>
 </html>
