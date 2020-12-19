@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>NRBG Career - Admin Dashboard</title>
+    <!-- Bootstrap CSS-->
+    <link href="{!! asset('assets/bootstrap-4.3.1/css/bootstrap.min.css') !!}" rel="stylesheet" type="text/css" />
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{!! asset('beauty/css/app.min.css') !!}">
     <!-- Template CSS -->
@@ -13,6 +15,12 @@
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="{!! asset('beauty/css/custom.css') !!}">
     <link rel='shortcut icon' type='image/x-icon' href="{!! asset('assets/img/favicon.ico') !!}"/>
+
+{{--    <link href="{!! asset('assets/DataTables-1.10.18/css/dataTables.bootstrap4.min.css') !!}" rel="stylesheet" type="text/css" />--}}
+    <link href="{!! asset('assets/DataTables-1.10.18/css/jquery.dataTables.min.css') !!}" rel="stylesheet" type="text/css" />
+    <link href="{!! asset('assets/jquery-ui-1.12.1/jquery-ui.css') !!}" rel="stylesheet" type="text/css" />
+
+
 </head>
 
 <body>
@@ -210,7 +218,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="nav-link" href="#">Division</a></li>
                             <li><a class="nav-link" href="#">District</a></li>
-                            <li><a class="nav-link" href="#">Police Station</a></li>
+                            <li><a class="nav-link" href="{!! url('bangladesh/PoliceStationIndex') !!}">Police Station</a></li>
                             <li><a class="nav-link" href="#">Post Office</a></li>
                         </ul>
                     </li>
@@ -781,15 +789,21 @@
         </footer>
     </div>
 </div>
+<script type="text/javascript" src="{!! asset('assets/bootstrap-4.3.1/js/bootstrap.min.js') !!}"></script>
 <!-- General JS Scripts -->
-<script src="beauty/js/app.min.js"></script>
+<script src="{!! asset('beauty/js/app.min.js') !!}"></script>
 <!-- JS Libraies -->
 <!-- Page Specific JS File -->
-<script src="beauty/js/page/index.js"></script>
+<script src="{!! asset('beauty/js/page/index.js') !!}"></script>
 <!-- Template JS File -->
-<script src="beauty/js/scripts.js"></script>
+<script src="{!! asset('beauty/js/scripts.js') !!}"></script>
 <!-- Custom JS File -->
-<script src="beauty/js/custom.js"></script>
+<script src="{!! asset('beauty/js/custom.js') !!}"></script>
+
+<script type="text/javascript" src="{!! asset('assets/DataTables-1.10.18/js/jquery.dataTables.min.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('assets/DataTables-1.10.18/js/dataTables.jqueryui.min.js') !!}"></script>
+
+@stack('scripts')
 </body>
 
 
