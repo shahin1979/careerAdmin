@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Profile;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ViewCandidateProfileCO extends Controller
+class CandidateProfileCO extends Controller
 {
     public function index()
     {

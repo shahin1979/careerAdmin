@@ -26,7 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['prefix' => 'profile', 'namespace' => 'Profile', 'middleware' => ['auth']], function () {
 
-    Route::get('viewProfileIndex','ViewCandidateProfileCO@index');
+    Route::get('personalInfoIndex','CandidateProfileCO@index');
 //    Route::post('changePassword',['as' => 'changePassword', 'uses' => 'ChangePasswordCO@update']);
 //    Route::get('myProfileIndex','ViewMyProfileCO@index');
 

@@ -19,10 +19,34 @@
 
 <body>
 
+{{--<nav class="navbar navbar-expand-lg main-navbar sticky">--}}
+{{--    <div class="form-inline mr-auto"><h1>{!! config('company.bank.name') !!}</h1>--}}
+{{--    </div>--}}
+{{--    <ul class="navbar-nav navbar-right">--}}
+
+
+
+
+
+{{--    </ul>--}}
+{{--</nav>--}}
+
+
+<div class="main-sidebar sidebar-style-2">
+    <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+            <img alt="image" src="{!! asset('beauty/img/logo_bank.jpg') !!}" width="300px" class="header-logo" />
+        </div>
+    </aside>
+</div>
+
+
 
 
 <div class="loader"></div>
 <div id="app">
+
+
 
 
     <section class="section">
@@ -38,10 +62,10 @@
                             <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="name">User Name</label>
-                                    <input id="name" type="text" class="form-control" name="name" tabindex="1" required>
+                                    <label for="name">Employee ID</label>
+                                    <input id="employee_id" type="text" class="form-control" name="employee_id" tabindex="1" required>
                                     <div class="invalid-feedback">
-                                        Please fill in your user name
+                                        Please fill in your employee id
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -64,6 +88,8 @@
                                         Login
                                     </button>
                                 </div>
+
+                                @include('partials.error-msg')
                             </form>
 
                         </div>
@@ -72,7 +98,7 @@
                 </div>
             </div>
         </div>
-        @include('partials.error-msg')
+
     </section>
 </div>
 <!-- General JS Scripts -->
