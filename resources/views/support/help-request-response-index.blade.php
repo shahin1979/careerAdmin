@@ -50,7 +50,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="remarks" class="control-label">Candidate Name</label></td>
+                    <td><label for="remarks" class="control-label">Response</label></td>
                     <td><textarea class="form-control" name="remarks" cols="50" rows="5" id="remarks"></textarea></td>
                 </tr>
 
@@ -88,6 +88,7 @@
                 responsive: true,
                 ajax: 'getRequestData',
                 columns: [
+                    { data: 'id', name: 'id', visible: false },
                     { data: 'user.name', name: 'user.name' },
                     { data: 'subject', name: 'subject' },
                     { data: 'description', name: 'description' },
@@ -95,6 +96,7 @@
                     { data: 'resolved_by', name: 'resolved_by' },
                     { data: 'action', name: 'action', orderable: false, searchable: false, printable: false}
                 ],
+                order: [[ 0, "desc" ]],
 
                 rowCallback: function( row, data, index ) {
                     if(index%2 == 0){

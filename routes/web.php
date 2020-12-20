@@ -60,8 +60,7 @@ Route::group(['prefix' => 'bangladesh', 'namespace' => 'Bangladesh', 'middleware
 Route::group(['prefix' => 'profile', 'namespace' => 'Profile', 'middleware' => ['auth']], function () {
 
     Route::get('personalInfoIndex','CandidateProfileCO@index');
-//    Route::post('changePassword',['as' => 'changePassword', 'uses' => 'ChangePasswordCO@update']);
-//    Route::get('myProfileIndex','ViewMyProfileCO@index');
+    Route::get('getProfiles','CandidateProfileCO@getProfile');
 
 //    Route::get('changeSecurityPinIndex','ChangeSecurityPinCO@index');
 //    Route::get('changeSecurityPin','ChangeSecurityPinCO@update')->middleware('verifiedOTP');

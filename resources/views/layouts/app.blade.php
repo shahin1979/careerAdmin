@@ -255,7 +255,7 @@
                     <li class="dropdown">
                         <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="copy"></i><span>Profile</span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link" href="{!! url('profile/personalInfoIndex') !!}">Personal Data</a></li>
+                            <li><a class="nav-link" href="{!! url('profile/personalInfoIndex') !!}">Registered Profiles</a></li>
                             <li><a class="nav-link" href="#">Applications</a></li>
                             <li><a class="nav-link" href="#">Eligible Candidates</a></li>
                             <li><a class="nav-link" href="#">Exam Process</a></li>

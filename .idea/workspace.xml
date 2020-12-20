@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/bangladesh/post-office-index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/support/help-request-response-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Bangladesh/PoliceStationCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Bangladesh/PoliceStationCO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Bangladesh/PostOfficeCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Bangladesh/PostOfficeCO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bangladesh/PoliceStation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bangladesh/PoliceStation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bangladesh/PostOffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bangladesh/PostOffice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bangladesh/police-station-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bangladesh/police-station-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/view-candidate-profile-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/candidate-profile-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/support/help-request-response-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/support/help-request-response-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +197,8 @@
       <workItem from="1608310306202" duration="7666000" />
       <workItem from="1608384246650" duration="2368000" />
       <workItem from="1608396651127" duration="3745000" />
-      <workItem from="1608443482049" duration="3094000" />
+      <workItem from="1608443482049" duration="3245000" />
+      <workItem from="1608449252665" duration="4211000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -232,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608389873309</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Bangladeshi Info Updated">
+      <created>1608448921665</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608448921665</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +246,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="home updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="home updated" />
+    <MESSAGE value="Bangladeshi Info Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bangladeshi Info Updated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

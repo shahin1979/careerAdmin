@@ -3,41 +3,31 @@
 namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profile\CandidatePersonal;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class CandidateProfileCO extends Controller
 {
     public function index()
     {
-        return view('profile.view-candidate-profile-index');
+        return view('profile.candidate-profile-index');
     }
 
-//    public function getProfile()
-//    {
-//        $profiles = ::query()->where('bank_id',1);
-//
-//        return DataTables::of($branches)
-//
-//            ->addColumn('action', function ($branches) {
-//                return '<div class="btn-group-sm" role="group" aria-label="Action Button">
-//                    <button data-remote="edit/' . $branches->id . '" data-rowid="'. $branches->id . '"
-//                        data-code="'. $branches->branch_code . '"
-//                        data-name="'. $branches->branch_name . '"
-//                        data-address="'. $branches->address . '"
-//                        data-city="'. $branches->city . '"
-//                        data-post="'. $branches->post_code . '"
-//                        data-country="'. $branches->country . '"
-//                        data-swift="'. $branches->swift_code . '"
-//                        data-phone="'. $branches->phone_no . '"
-//                        data-opening="'. $branches->opening_date . '"
-//                        data-routing="'. $branches->routing_no . '"
-//                        data-email="'. $branches->email . '"
-//
-//                        type="button" class="btn btn-sm btn-branch-edit btn-primary" ><i class="fa fa-edit" >Edit</i></button>
-//                    </div>
-//                    ';
-//            })
-//            ->rawColumns(['action'])
-//            ->make(true);
-//    }
+    public function getProfile()
+    {
+        $profiles = CandidatePersonal::query()->with('pm_district');
+
+        return DataTables::of($profiles)
+
+            ->addColumn('action', function ($profiles) {
+                return '<div class="btn-group-sm" role="group" aria-label="Action Button">
+                    <button data-remote="edit/' . $profiles->id . '" data-rowid="'. $profiles->id . '"
+                        type="button" class="btn btn-sm btn-branch-edit btn-primary" >Details</button>
+                    </div>
+                    ';
+            })
+            ->rawColumns(['action'])
+            ->make(true);
+    }
 }
