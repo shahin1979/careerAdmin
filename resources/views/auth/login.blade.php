@@ -8,22 +8,45 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>NGB Career - Admin Dashboard</title>
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="beauty/css/app.min.css">
-    <link rel="stylesheet" href="beauty/bundles/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="{!! asset('beauty/css/app.min.css') !!}">
     <!-- Template CSS -->
-    <link rel="stylesheet" href="beauty/css/style.css">
-    <link rel="stylesheet" href="beauty/css/components.css">
+    <link rel="stylesheet" href="{!! asset('beauty/css/style.css') !!}">
+    <link rel="stylesheet" href="{!! asset('beauty/css/components.css') !!}">
     <!-- Custom style CSS -->
-    <link rel="stylesheet" href="beauty/css/custom.css">
-    <link rel='shortcut icon' type='image/x-icon' href='beauty/img/favicon.ico' />
+    <link rel="stylesheet" href="{!! asset('beauty/css/custom.css') !!}">
+    <link rel='shortcut icon' type='image/x-icon' href="{!! asset('beauty/img/favicon.ico') !!}" />
 </head>
 
 <body>
+
+{{--<nav class="navbar navbar-expand-lg main-navbar sticky">--}}
+{{--    <div class="form-inline mr-auto"><h1>{!! config('company.bank.name') !!}</h1>--}}
+{{--    </div>--}}
+{{--    <ul class="navbar-nav navbar-right">--}}
+
+
+
+
+
+{{--    </ul>--}}
+{{--</nav>--}}
+
+
+<div class="main-sidebar sidebar-style-2">
+    <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+            <img alt="image" src="{!! asset('beauty/img/logo_bank.jpg') !!}" width="300px" class="header-logo" />
+        </div>
+    </aside>
+</div>
+
 
 
 
 <div class="loader"></div>
 <div id="app">
+
+
 
 
     <section class="section">
@@ -39,10 +62,10 @@
                             <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="name">Email</label>
-                                    <input id="name" type="text" class="form-control" name="name" tabindex="1" required autofocus>
+                                    <label for="name">Employee ID</label>
+                                    <input id="employee_id" type="text" class="form-control" name="employee_id" tabindex="1" required>
                                     <div class="invalid-feedback">
-                                        Please fill in your email
+                                        Please fill in your employee id
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -65,6 +88,8 @@
                                         Login
                                     </button>
                                 </div>
+
+                                @include('partials.error-msg')
                             </form>
 
                         </div>
@@ -73,15 +98,16 @@
                 </div>
             </div>
         </div>
+
     </section>
 </div>
 <!-- General JS Scripts -->
-<script src="beauty/js/app.min.js"></script>
+<script src="{!! asset('beauty/js/app.min.js') !!}"></script>
 <!-- JS Libraies -->
 <!-- Page Specific JS File -->
 <!-- Template JS File -->
-<script src="beauty/js/scripts.js"></script>
+<script src="{!! asset('beauty/js/scripts.js') !!}"></script>
 <!-- Custom JS File -->
-<script src="beauty/js/custom.js"></script>
+<script src="{!! asset('beauty/js/custom.js') !!}"></script>
 </body>
 </html>

@@ -2572,7 +2572,7 @@ p, ul:not(.list-unstyled), ol {
 
 .form-control, .input-group-text, .custom-select, .custom-file-label {
     background-color: #fdfdff;
-    border-color: #e4e6fc
+    border-color: #4fb746
 }
 
 .form-control:focus, .input-group-text:focus, .custom-select:focus, .custom-file-label:focus {
@@ -2581,9 +2581,9 @@ p, ul:not(.list-unstyled), ol {
 }
 
 .input-group-text, select.form-control:not([size]):not([multiple]), .form-control:not(.form-control-sm):not(.form-control-lg) {
-    font-size: 14px;
-    padding: 10px 15px;
-    height: 42px
+    font-size: 12px;
+    padding: 5px 15px;
+    height: 32px
 }
 
 textarea.form-control {
@@ -2595,7 +2595,7 @@ textarea.form-control {
 }
 
 .custom-file, .custom-file-label, .custom-select, .custom-file-label:after, .form-control[type="color"], select.form-control:not([size]):not([multiple]) {
-    height: calc(2.25rem + 6px)
+    height: calc(1.50rem + 6px)
 }
 
 .form-control.creditcard {
@@ -2634,7 +2634,7 @@ textarea.form-control {
 }
 
 .form-group {
-    margin-bottom: 25px
+    margin-bottom: 10px
 }
 
 .form-group .control-label, .form-group > label {

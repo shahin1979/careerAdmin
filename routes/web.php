@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('auth.login');
-});
+})->middleware('guest');
 
 Auth::routes();
 
@@ -24,9 +24,24 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
+Route::group(['prefix' => 'bangladesh', 'namespace' => 'Bangladesh', 'middleware' => ['auth']], function () {
+
+    Route::get('PoliceStationIndex','PoliceStationCO@index');
+    Route::get('getPStationsData','PoliceStationCO@getPStationsData');
+//    Route::post('changePassword',['as' => 'changePassword', 'uses' => 'ChangePasswordCO@update']);
+//    Route::get('myProfileIndex','ViewMyProfileCO@index');
+
+//    Route::get('changeSecurityPinIndex','ChangeSecurityPinCO@index');
+//    Route::get('changeSecurityPin','ChangeSecurityPinCO@update')->middleware('verifiedOTP');
+
+
+});
+
+
 Route::group(['prefix' => 'profile', 'namespace' => 'Profile', 'middleware' => ['auth']], function () {
 
-    Route::get('viewProfileIndex','ViewCandidateProfileCO@index');
+    Route::get('personalInfoIndex','CandidateProfileCO@index');
 //    Route::post('changePassword',['as' => 'changePassword', 'uses' => 'ChangePasswordCO@update']);
 //    Route::get('myProfileIndex','ViewMyProfileCO@index');
 
