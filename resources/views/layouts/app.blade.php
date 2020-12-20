@@ -219,7 +219,7 @@
                             <li><a class="nav-link" href="#">Division</a></li>
                             <li><a class="nav-link" href="#">District</a></li>
                             <li><a class="nav-link" href="{!! url('bangladesh/PoliceStationIndex') !!}">Police Station</a></li>
-                            <li><a class="nav-link" href="#">Post Office</a></li>
+                            <li><a class="nav-link" href="{!! url('bangladesh/PostOfficeIndex') !!}">Post Office</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -239,6 +239,13 @@
                             <li><a class="nav-link" href="#">New Job Circular</a></li>
                             <li><a class="nav-link" href="#">Job Circular Details</a></li>
                             <li><a class="nav-link" href="#">Eligible Criteria</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="menu-toggle nav-link has-dropdown font-weight-bold text-dark"><i data-feather="feather"></i><span>Support</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-link" href="{!! url('support/requestResponseIndex') !!}">Support Response</a></li>
                         </ul>
                     </li>
 

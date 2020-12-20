@@ -1,7 +1,6 @@
 @extends('layouts.app')
+
 @section('content')
-
-
     <script src="{!! asset('assets/js/jquery-3.3.1.min.js') !!}"></script>
 
 
@@ -9,7 +8,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb" style="background-color: rgba(44,221,32,0.1); margin-bottom: 0.5rem">
             <li class="breadcrumb-item"><a class="white-text" href="{!! url('home') !!}">Home</a></li>
-            <li class="breadcrumb-item active">Police Stations</li>
+            <li class="breadcrumb-item active">Post Office</li>
         </ol>
     </nav>
 
@@ -23,7 +22,7 @@
 
             <div class="col-md-4">
                 <div class="pull-left">
-                    <button type="button" class="btn btn-station-add btn-primary"><i class="fa fa-plus"></i>New</button>
+                    <button type="button" class="btn btn-post-add btn-primary"><i class="fa fa-plus"></i>New</button>
                 </div>
             </div>
             <div class="col-md-8">
@@ -32,26 +31,25 @@
                 </div>
             </div>
         </div>
-
         @include('partials.error-msg')
 
-
         <div class="col-md-12 dataTables_wrapper" style="overflow-x:auto;">
-            <table class="table table-bordered table-hover table-striped" id="stations-table">
-{{--            <table style="width:100%" class="table table-bordered table-hover table-responsive" id="stations-table">--}}
+            <table class="table table-bordered table-hover table-striped" id="post-office-table">
+                {{--            <table style="width:100%" class="table table-bordered table-hover table-responsive" id="stations-table">--}}
                 <thead style="background-color: #b0b0b0">
                 <tr>
                     <th>ID</th>
                     <th>District</th>
-                    <th>Name</th>
+                    <th>Post Office</th>
+                    <th>Post Code</th>
                     <th class="text-right">Action</th>
                 </tr>
                 </thead>
             </table>
         </div>
 
-        {!! Form::open(['url'=>'bangladesh/PoliceStationIndex','method'=>'POST']) !!}
-        <div id="new-station" class="col-md-8">
+        {!! Form::open(['url'=>'bangladesh/PostOfficeIndex','method'=>'POST']) !!}
+        <div id="new-posts" class="col-md-8">
             <table width="50%" class="table table-bordered table-striped table-hover">
                 <tbody>
                 <tr>
@@ -59,8 +57,12 @@
                     <td>{!! Form::select('district_id',$districts,null,array('id'=>'district_id','class'=>'form-control','autofocus')) !!}</td>
                 </tr>
                 <tr>
-                    <td><label for="name" class="control-label">Name</label></td>
-                    <td><input id="name" type="text" class="form-control" name="name" value="" required autofocus></td>
+                    <td><label for="name" class="control-label">Post Office</label></td>
+                    <td><input id="name" type="text" class="form-control" name="name" value="" required></td>
+                </tr>
+                <tr>
+                    <td><label for="post_code" class="control-label">Post Code</label></td>
+                    <td><input id="post_code" type="text" class="form-control" name="post_code" value="" required></td>
                 </tr>
                 </tbody>
 
@@ -109,22 +111,23 @@
 
         $(document).ready(function(){
 
-            $('#new-station').hide();
+            $('#new-posts').hide();
             $('#edit-station').hide();
 
         });
 
         $(function() {
-            var table= $('#stations-table').DataTable({
+            var table= $('#post-office-table').DataTable({
                 processing: true,
                 serverSide: true,
                 autoWidth: false,
                 responsive: true,
-                ajax: 'getPStationsData',
+                ajax: 'getPOfficeData',
                 columns: [
                     { data: 'id', name: 'id' },
                     { data: 'district.name', name: 'district.name' },
                     { data: 'name', name: 'name' },
+                    { data: 'post_code', name: 'post_code' },
                     { data: 'action', name: 'action', orderable: false, searchable: false, printable: false}
                 ],
                 columnDefs: [
@@ -154,7 +157,7 @@
                 $('#id-for-update').val($(this).data('rowid'));
 
                 $('#edit-sub-category').show();
-                $('#sub-categories-table').parents('div.dataTables_wrapper').first().hide();
+                $('#post-office-table').parents('div.dataTables_wrapper').first().hide();
                 $('#top-head').hide();
             });
 
@@ -193,9 +196,9 @@
 
 
 
-        $(document).on('click', '.btn-station-add', function (e) {
-            $('#new-station').show();
-            $('#stations-table').parents('div.dataTables_wrapper').first().hide();
+        $(document).on('click', '.btn-post-add', function (e) {
+            $('#new-posts').show();
+            $('#post-office-table').parents('div.dataTables_wrapper').first().hide();
             $('#top-head').hide();
         });
 
@@ -232,9 +235,9 @@
 
                 success: function (data) {
                     $('#edit-sub-category').hide();
-                    $('#sub-categories-table').DataTable().draw(false);
+                    $('#post-office-table').DataTable().draw(false);
                     $('#top-head').show();
-                    $('#sub-categories-table').parents('div.dataTables_wrapper').first().show();
+                    $('#post-office-table').parents('div.dataTables_wrapper').first().show();
 
                 }
 

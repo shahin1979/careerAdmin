@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Bangladesh\District;
 use App\Models\Bangladesh\PoliceStation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
 class PoliceStationCO extends Controller
@@ -51,14 +53,12 @@ class PoliceStationCO extends Controller
 
         try {
 
-            $ids = SubCategory::query()->create([
-                'company_id' => $this->company_id,
-                'category_id'=>$request['category_id'],
+            $ids = PoliceStation::query()->create([
+                'lang' => 'en',
+                'district_id'=>$request['district_id'],
                 'name' => Str::ucfirst($request['name']),
                 'status' => true,
-                'acc_in_stock' =>$request->filled('acc_in_stock') ? $request['acc_in_stock'] : null,
-                'acc_out_stock' =>$request->filled('acc_out_stock') ? $request['acc_out_stock'] : null,
-                'user_id' => $this->user_id
+                'user_id' => Auth::id()
             ]);
 
         }catch (\Exception $e)
@@ -70,7 +70,7 @@ class PoliceStationCO extends Controller
 
         DB::commit();
 
-        return redirect()->action('Inventory\Product\SubCategoryCO@index')->with('success','New Sub Category Added');
+        return redirect()->action('Bangladesh\PoliceStationCO@index')->with('success','New Police Station Added');
     }
 
 }

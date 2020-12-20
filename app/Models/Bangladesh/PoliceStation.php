@@ -23,6 +23,7 @@ class PoliceStation extends Model
         'district_id',
         'name',
         'status',
+        'user_id'
     ];
 
     public function district()
