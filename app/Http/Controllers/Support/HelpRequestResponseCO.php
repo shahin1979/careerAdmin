@@ -48,7 +48,13 @@ class HelpRequestResponseCO extends Controller
             ->addColumn('resolved_by', function ($supports) {
                 return $supports->admin->name;
             })
-            ->rawColumns(['action'])
+            ->editColumn('description', function ($supports) {
+                return nl2br($supports->description);
+            })
+            ->editColumn('remarks', function ($supports) {
+                return nl2br($supports->remarks);
+            })
+            ->rawColumns(['action','remarks','description'])
             ->make(true);
     }
 
