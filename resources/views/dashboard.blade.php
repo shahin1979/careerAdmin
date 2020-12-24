@@ -130,7 +130,7 @@
                                         <td>{!! $row->pm_thana->name !!}</td>
                                         <td>{!! $row->gender !!}</td>
                                         <td class="text-right">{!! $row->total !!}</td>
-                                        <td class="text-right"><a href="#" class="btn btn-outline-primary">Detail</a></td>
+                                        <td class="text-right"><a href="{!! url('profile/groupIndex/'.$row->pm_district_id.'/'.$row->pm_police_station_id) !!}" class="btn btn-outline-primary">Detail</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

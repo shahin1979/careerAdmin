@@ -30,4 +30,12 @@ class CandidateProfileCO extends Controller
             ->rawColumns(['action'])
             ->make(true);
     }
+
+    public function viewGroupIndex($district,$thana)
+    {
+        $profiles = CandidatePersonal::query()->where('pm_district_id',$district)
+            ->where('pm_police_station_id',$thana)->get();
+
+        return view('profile.group-wise-candidate-index',compact('profiles'));
+    }
 }

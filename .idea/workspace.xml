@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/group-wise-candidate-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Support/HelpRequestResponseCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Support/HelpRequestResponseCO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/candidate-profile-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/candidate-profile-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +199,9 @@
       <workItem from="1608396651127" duration="3745000" />
       <workItem from="1608443482049" duration="3245000" />
       <workItem from="1608449252665" duration="4310000" />
-      <workItem from="1608696886371" duration="942000" />
+      <workItem from="1608696886371" duration="1061000" />
+      <workItem from="1608700998253" duration="969000" />
+      <workItem from="1608716141686" duration="6923000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -239,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608464859513</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Support Request response formatted">
+      <created>1608698023569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608698023569</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +267,8 @@
     <MESSAGE value="home updated" />
     <MESSAGE value="Bangladeshi Info Updated" />
     <MESSAGE value="Support Request Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Support Request Updated" />
+    <MESSAGE value="Support Request response formatted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Support Request response formatted" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

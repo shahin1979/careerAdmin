@@ -139,100 +139,12 @@
                 }
             });
 
-            $(this).on('click', '.btn-sub-category-edit', function (e) {
 
 
-                $('#category-id-for-edit').val($(this).data('category'));
-                $('#name-for-edit').val($(this).data('name'));
-                $('#acc-in-stock-edit').val($(this).data('receive'));
-                $('#acc-out-stock-edit').val($(this).data('delivery'));
-                $('#id-for-update').val($(this).data('rowid'));
-
-                $('#edit-sub-category').show();
-                $('#sub-categories-table').parents('div.dataTables_wrapper').first().hide();
-                $('#top-head').hide();
-            });
-
-
-            $(this).on('click', '.btn-sub-category-delete', function (e) {
+            $(this).on('click', '.btn-details', function (e) {
 
                 e.preventDefault();
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                });
-
-                var url = $(this).data('remote');
-                // confirm then
-                $.ajax({
-                    beforeSend: function (request) {
-                        return confirm("Are you sure?");
-                    },
-                    url: url,
-                    type: 'DELETE',
-                    dataType: 'json',
-                    data: {method: '_DELETE', submit: true},
-
-                    error: function (request, status, error) {
-                        alert(request.responseText);
-                    },
-
-                }).always(function (data) {
-                    $('#sub-categories-table').DataTable().draw(true);
-                })
-            });
-
-
-        });
-
-
-
-        $(document).on('click', '.btn-station-add', function (e) {
-            $('#new-station').show();
-            $('#stations-table').parents('div.dataTables_wrapper').first().hide();
-            $('#top-head').hide();
-        });
-
-        // add new sub Category
-
-
-
-        $(document).on('click', '.btn-sub-category-update', function (e) {
-            e.preventDefault();
-
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            var url = 'subCategory/update/' + $('#id-for-update').val();
-
-            // confirm then
-            $.ajax({
-                url: url,
-                type: 'POST',
-                dataType: 'json',
-
-                data: {method: '_POST', submit: true,
-                    acc_out_stock:$('#acc-out-stock-edit').val(),
-                    acc_in_stock:$('#acc-in-stock-edit').val(),
-                    name:$('#name-for-edit').val(),
-                },
-
-                error: function (request, status, error) {
-                    var myObj = JSON.parse(request.responseText);
-                    alert(myObj.error);
-                },
-
-                success: function (data) {
-                    $('#edit-sub-category').hide();
-                    $('#sub-categories-table').DataTable().draw(false);
-                    $('#top-head').show();
-                    $('#sub-categories-table').parents('div.dataTables_wrapper').first().show();
-
-                }
-
+                location.window = 'candidate/groupIndex'
             });
         });
 
