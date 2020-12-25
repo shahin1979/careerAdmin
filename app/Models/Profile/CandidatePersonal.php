@@ -47,6 +47,11 @@ class CandidatePersonal extends Model
         return $this->hasMany(CandidateReference::class,'candidate_id','id');
     }
 
+    public function document()
+    {
+        return $this->hasMany(CandidateDocument::class,'candidate_id','id');
+    }
+
     public function religion()
     {
         return $this->belongsTo(Religion::class,'religion_id','id');
