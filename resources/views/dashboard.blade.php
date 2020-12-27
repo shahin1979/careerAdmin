@@ -118,7 +118,7 @@
                             <tr>
                                 <th>Name of District</th>
                                 <th>Police Station</th>
-                                <th>Gender</th>
+{{--                                <th>Gender</th>--}}
                                 <th class="text-right">No of Applicant</th>
                                 <th class="text-right">Action</th>
                             </tr>
@@ -128,7 +128,7 @@
                                     <tr>
                                         <td>{!! $row->pm_district->name !!}</td>
                                         <td>{!! $row->pm_thana->name !!}</td>
-                                        <td>{!! $row->gender !!}</td>
+{{--                                        <td>{!! $row->gender !!}</td>--}}
                                         <td class="text-right">{!! $row->total !!}</td>
                                         <td class="text-right"><a href="{!! url('profile/groupIndex/'.$row->pm_district_id.'/'.$row->pm_police_station_id) !!}" class="btn btn-outline-primary">Detail</a></td>
                                     </tr>

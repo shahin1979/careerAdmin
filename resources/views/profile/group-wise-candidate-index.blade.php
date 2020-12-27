@@ -34,13 +34,13 @@
                 {!! $ed->examination->exam_name !!} : {!! $ed->institute !!} : {!! $ed->result !!} <br/>
                 @endforeach
             </td>
-            <td width="5%"><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[0]->document_path !!}" class="dropdown-item has-icon text-danger">
+            <td width="5%"><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[0]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
                     Document
                 </a></td>
-            <td width="5%"><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[1]->document_path !!}" class="dropdown-item has-icon text-danger">
+            <td width="5%"><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[1]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
                     SSC
                 </a></td>
-            <td width="5%"><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[2]->document_path !!}" class="dropdown-item has-icon text-danger">
+            <td width="5%"><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[2]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
                     Last
                 </a></td>
         </tr>

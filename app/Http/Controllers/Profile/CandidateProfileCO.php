@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Bangladesh\District;
 use App\Models\Bangladesh\PoliceStation;
 use App\Models\Profile\CandidatePersonal;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
@@ -44,6 +45,9 @@ class CandidateProfileCO extends Controller
 
         $profiles = CandidatePersonal::query()->where('pm_district_id',$district)
             ->where('pm_police_station_id',$thana)
+            ->whereHas('application',function (Builder $query) {
+                $query->where('eligible', true);
+            })
             ->with('education')->with('document')
             ->get();
 

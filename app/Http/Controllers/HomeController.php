@@ -35,11 +35,11 @@ class HomeController extends Controller
 //        $applied = CandidatePersonal::query()->groupBy('pm_district_id','pm_police_station_id')
 
         $applied = CandidatePersonal::query()
-            ->select('pm_district_id', 'pm_police_station_id','gender',DB::raw('count(*) as total'))
-            ->groupBy('pm_district_id','pm_police_station_id','gender')
+            ->select('pm_district_id', 'pm_police_station_id',DB::raw('count(*) as total'))
+            ->groupBy('pm_district_id','pm_police_station_id')
             ->orderBy('pm_district_id','ASC')
             ->whereHas('application',function (Builder $query) {
-                $query->where('status', true);
+                $query->where('eligible', true);
             })->get();
 
 //        return view('home',compact('users','profiles','applications'));
