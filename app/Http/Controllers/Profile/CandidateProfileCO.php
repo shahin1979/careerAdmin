@@ -45,9 +45,12 @@ class CandidateProfileCO extends Controller
 
         $profiles = CandidatePersonal::query()->where('pm_district_id',$district)
             ->where('pm_police_station_id',$thana)
-            ->whereHas('application',function (Builder $query) {
-                $query->where('eligible', true);
-            })
+//            ->whereHas('application',function (Builder $query) {
+//                $query->where('eligible', true);
+//            })
+            ->with(['application'=>function($q){
+                $q->where('eligible',true);
+            }])
             ->with('education')->with('document')
             ->get();
 

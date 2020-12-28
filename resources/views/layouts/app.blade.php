@@ -218,8 +218,8 @@
                                 data-feather="briefcase"></i><span>Security</span></a>
                         <ul class="dropdown-menu">
                             <li><a class="nav-link" href="{!! url('register') !!}">Add User</a></li>
-                            <li><a class="nav-link" href="#">Change Password</a></li>
-                            <li><a class="nav-link" href="#">Reset Password</a></li>
+                            <li><a class="nav-link" href="{!! url('admin/changePasswordIndex') !!}">Change Password</a></li>
+                            <li><a class="nav-link" href="{!! url('admin/resetPasswordIndex') !!}">Reset Password</a></li>
                             <li><a class="nav-link" href="#">Manage Permission</a></li>
                         </ul>
                     </li>

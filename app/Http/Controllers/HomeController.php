@@ -24,9 +24,9 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+//     * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         $users= User::query()->count();
         $profiles = CandidatePersonal::query()->count();
@@ -36,11 +36,36 @@ class HomeController extends Controller
 
         $applied = CandidatePersonal::query()
             ->select('pm_district_id', 'pm_police_station_id',DB::raw('count(*) as total'))
+            ->where('candidate_personals.status',true)
             ->groupBy('pm_district_id','pm_police_station_id')
             ->orderBy('pm_district_id','ASC')
-            ->whereHas('application',function (Builder $query) {
-                $query->where('eligible', true);
-            })->get();
+//            ->whereHas('application',function (Builder $query) {
+//                $query->where('eligible', true);
+//            })
+            ->get();
+
+        if($request->ajax())
+        {
+            $input = $request->get('query');
+
+            $table = CandidatePersonal::query()
+                ->select('pm_district_id', 'pm_police_station_id',DB::raw('count(*) as total'))
+//                ->where('candidate_personals.status',true)
+                ->whereHas('application',function (Builder $query) {
+                    $query->where('eligible', true);
+                })
+                ->whereHas('pm_district',function (Builder $query) use($input) {
+                    $query->where('name','LIKE', '%'.$input.'%');
+                })->with('pm_district')
+                ->orWhereHas('pm_thana',function (Builder $query) use($input) {
+                    $query->where('name','LIKE', '%'.$input.'%');
+                })->with('pm_thana')
+                ->groupBy('pm_district_id','pm_police_station_id')
+                ->orderBy('pm_district_id','ASC')
+                ->get();
+
+            return response()->json($table);
+        }
 
 //        return view('home',compact('users','profiles','applications'));
 

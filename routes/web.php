@@ -17,11 +17,20 @@ Route::get('/', function () {
     return view('auth.login');
 })->middleware('guest');
 
-Auth::routes();
+//Auth::routes();
+Auth::routes(['register' => false, 'reset' => false]);
+
+Route::get('admin/resetPasswordIndex', 'Auth\ResetPasswordController@showResetForm')->middleware('auth');
+Route::post('admin/resetPassword', 'Auth\ResetPasswordController@reset')->middleware('auth');
 
 Route::get('logout', 'Auth\LoginController@logout');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('districtThanaIndex','HomeController@index');
+
+Route::get('admin/changePasswordIndex','Auth\ChangePasswordCO@index')->middleware('auth');
+Route::post('admin/changePassword','Auth\ChangePasswordCO@change')->middleware('auth');
 
 
 
