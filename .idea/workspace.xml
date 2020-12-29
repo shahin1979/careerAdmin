@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/change.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/group-wise-candidate-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/group-wise-candidate-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/support/help-request-response-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/support/help-request-response-index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +199,9 @@
       <workItem from="1608700998253" duration="969000" />
       <workItem from="1608716141686" duration="6923000" />
       <workItem from="1609061754937" duration="688000" />
-      <workItem from="1609127652977" duration="15347000" />
+      <workItem from="1609127652977" duration="15488000" />
+      <workItem from="1609217297310" duration="1759000" />
+      <workItem from="1609225661086" duration="1470000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -265,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609070110807</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="search activate, password change reset">
+      <created>1609147954805</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609147954805</updated>
+    </task>
+    <task id="LOCAL-00010" summary="search activate, password change reset">
+      <created>1609148041256</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609148041256</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +289,8 @@
     <MESSAGE value="Bangladeshi Info Updated" />
     <MESSAGE value="Support Request Updated" />
     <MESSAGE value="Support Request response formatted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Support Request response formatted" />
+    <MESSAGE value="search activate, password change reset" />
+    <option name="LAST_COMMIT_MESSAGE" value="search activate, password change reset" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

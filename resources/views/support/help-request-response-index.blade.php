@@ -18,6 +18,7 @@
             <table class="table table-bordered table-hover table-striped" id="supports-table">
                 <thead style="background-color: #b0b0b0">
                 <tr>
+                    <th></th>
                     <th>User</th>
                     <th>Request Subject</th>
                     <th>Request Details</th>
