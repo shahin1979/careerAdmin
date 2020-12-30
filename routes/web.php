@@ -33,6 +33,15 @@ Route::get('admin/changePasswordIndex','Auth\ChangePasswordCO@index')->middlewar
 Route::post('admin/changePassword','Auth\ChangePasswordCO@change')->middleware('auth');
 
 
+Route::group(['prefix' => 'admin', 'namespace' => 'Security', 'middleware' => ['auth']], function () {
+
+    Route::get('databaseBKPIndex','DatabaseBackupCO@index');
+    Route::get('downloadBkp/{name}','DatabaseBackupCO@download');
+    Route::get('deleteBkp/{name}','DatabaseBackupCO@destroy');
+    Route::get('backupDBIndex','DatabaseBackupCO@store');
+});
+
+
 
 Route::group(['prefix' => 'support', 'namespace' => 'Support', 'middleware' => ['auth']], function () {
 

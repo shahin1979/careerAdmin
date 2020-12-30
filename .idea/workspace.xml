@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Security/DatabaseBackupCO.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/security/backup-database-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/support/help-request-response-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/support/help-request-response-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/admin-login-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/admin-login-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +156,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/bootstrap-4.3.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/company" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
@@ -158,11 +164,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/company" />
       <recent name="$PROJECT_DIR$/public/assets/bootstrap-4.3.1" />
       <recent name="$PROJECT_DIR$/public/assets/bootstrap-4.3.1/css" />
       <recent name="$PROJECT_DIR$/public/assets/bootstrap-4.3.1/js" />
       <recent name="$PROJECT_DIR$/public/assets/css" />
-      <recent name="$PROJECT_DIR$/public/assets/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/assets/jquery-ui-1.12.1" />
@@ -201,7 +207,9 @@
       <workItem from="1609061754937" duration="688000" />
       <workItem from="1609127652977" duration="15488000" />
       <workItem from="1609217297310" duration="1759000" />
-      <workItem from="1609225661086" duration="1470000" />
+      <workItem from="1609225661086" duration="1498000" />
+      <workItem from="1609311888153" duration="1215000" />
+      <workItem from="1609319633491" duration="6415000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -273,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609148041256</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="search activate, password change reset">
+      <created>1609241617736</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609241617736</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

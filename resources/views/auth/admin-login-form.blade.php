@@ -26,7 +26,7 @@
 <body>
 <div style="background-color: #f7ff00;height: 2px">&nbsp;</div>
 <nav class="navbar navbar-expand-lg navbar-mainbg" style="background-color: #F6FFED">
-    <img src="{!! asset('assets/images/logo_NRB_Global_Bank.jpg') !!}"  height="60px" alt="Responsive image">
+    <img src="{!! asset('assets/images/logo_company_sm') !!}"  height="60px" alt="Responsive image">
     <div class="collapse navbar-collapse justify-content-center">
 
         <div class="justify-content-center">
@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <img src="{!! asset('assets/images/logo_NRB_Global_Bank.jpg') !!}"  height="60px" alt="Responsive image">
+    <img src="{!! asset('assets/images/logo_company_sm.jpg') !!}"  height="60px" alt="Responsive image">
 </nav>
 <div style="background-color: #f7ff00;height: 2px">&nbsp;</div>
 

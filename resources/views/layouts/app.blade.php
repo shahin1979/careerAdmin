@@ -60,7 +60,7 @@
                 <li class="nav-item"><i><span style="font-weight: bold; color: #721c24">{!! $user->name !!}</span></i></li>
                 <li class="nav-item">
 
-                    <a href="{!! 'logout' !!}" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+                    <a href="{!! url('logout') !!}" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
                         Logout
                     </a>
 
@@ -206,7 +206,7 @@
         <div class="main-sidebar sidebar-style-2">
             <aside id="sidebar-wrapper">
                 <div class="sidebar-brand">
-                    <img alt="image" src="{!! asset('beauty/img/logo_bank.jpg') !!}" width="250px" class="header-logo" />
+                    <img alt="image" src="{!! asset('beauty/img/logo_company_sm.jpg') !!}" width="250px" class="header-logo" />
                 </div>
                 <ul class="sidebar-menu">
                     <li class="menu-header">Main</li>
@@ -221,6 +221,7 @@
                             <li><a class="nav-link" href="{!! url('admin/changePasswordIndex') !!}">Change Password</a></li>
                             <li><a class="nav-link" href="{!! url('admin/resetPasswordIndex') !!}">Reset Password</a></li>
                             <li><a class="nav-link" href="#">Manage Permission</a></li>
+                            <li><a class="nav-link" href="{!! url('admin/databaseBKPIndex') !!}">Database Backup</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
