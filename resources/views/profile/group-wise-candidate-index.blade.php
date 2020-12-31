@@ -32,7 +32,7 @@
             <td>{!! $row->name !!}</td>
             <td style="width: 15%">{!! $row->pm_address !!}</td>
             <td style="border-bottom-color: red; border-bottom-width: 1px">@foreach($row->education as $ed)
-                {!! $ed->examination->exam_name !!} : {!! $ed->institute !!} : {!! $ed->result !!} Out of {!! $ed->total_cgpa !!} <br/>
+                {!! $ed->examination->exam_name !!} : {!! $ed->exam_serial == 1 ? $ed->institute : ($ed->exam_serial ==2 ? $ed->institute : $ed->university->name) !!} : {!! $ed->result !!} Out of {!! $ed->total_cgpa !!} <br/>
                 @endforeach
             </td>
             <td>{!! isset($row->application) ? 'Yes' : 'No' !!}</td>
