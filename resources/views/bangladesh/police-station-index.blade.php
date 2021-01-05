@@ -55,7 +55,7 @@
             <table width="50%" class="table table-bordered table-striped table-hover">
                 <tbody>
                 <tr>
-                    <td><label for="name" class="control-label">Category</label></td>
+                    <td><label for="name" class="control-label">District</label></td>
                     <td>{!! Form::select('district_id',$districts,null,array('id'=>'district_id','class'=>'form-control','autofocus')) !!}</td>
                 </tr>
                 <tr>

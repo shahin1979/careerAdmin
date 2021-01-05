@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{!! asset('beauty/css/components.css') !!}">
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="{!! asset('beauty/css/custom.css') !!}">
-    <link rel='shortcut icon' type='image/x-icon' href="{!! asset('assets/img/favicon.ico') !!}"/>
+    <link rel='shortcut icon' type='image/x-icon' href="{!! asset('beauty/img/favicon.ico') !!}"/>
 
 {{--    <link href="{!! asset('assets/DataTables-1.10.18/css/dataTables.bootstrap4.min.css') !!}" rel="stylesheet" type="text/css" />--}}
     <link href="{!! asset('assets/DataTables-1.10.18/css/jquery.dataTables.min.css') !!}" rel="stylesheet" type="text/css" />
@@ -39,7 +39,7 @@
                 </ul>
             </div>
 
-            <div class="form-inline mr-auto"><h1>NRBG Bank Career Admin</h1>
+            <div class="form-inline mr-auto"><h1>Career Admin Portal</h1>
 
                 {{--                <ul class="navbar-nav mr-3">--}}
                 {{--                    <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg--}}
@@ -264,12 +264,13 @@
 
                     <li class="menu-header">Applicants</li>
                     <li class="dropdown">
-                        <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="copy"></i><span>Profile</span></a>
+                        <a href="#" class="menu-toggle nav-link has-dropdown font-weight-bold text-dark"><i data-feather="copy"></i><span>Profile</span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="nav-link" href="{!! url('profile/personalInfoIndex') !!}">Registered Profiles</a></li>
-                            <li><a class="nav-link" href="#">Applications</a></li>
-                            <li><a class="nav-link" href="#">Eligible Candidates</a></li>
-                            <li><a class="nav-link" href="#">Exam Process</a></li>
+                            <li><a class="nav-link font-weight-bold text-dark" href="{!! url('profile/personalInfoIndex') !!}">Registered Profiles</a></li>
+                            <li><a class="nav-link font-weight-bold text-dark" href="{!! url('profile/shortListIndex') !!}">Short List</a></li>
+                            <li><a class="nav-link font-weight-bold text-dark" href="#">Applications</a></li>
+                            <li><a class="nav-link font-weight-bold text-dark" href="#">Eligible Candidates</a></li>
+                            <li><a class="nav-link font-weight-bold text-dark" href="#">Exam Process</a></li>
                         </ul>
                     </li>
                     {{--                    <li class="dropdown">--}}

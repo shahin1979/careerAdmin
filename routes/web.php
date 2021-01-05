@@ -82,6 +82,7 @@ Route::group(['prefix' => 'profile', 'namespace' => 'Profile', 'middleware' => [
 
     Route::get('groupIndex/{district}/{thana}','CandidateProfileCO@viewGroupIndex');
 
+    Route::get('shortListIndex','ShortListCandidateCO@index');
 
 //    Route::get('changeSecurityPinIndex','ChangeSecurityPinCO@index');
 //    Route::get('changeSecurityPin','ChangeSecurityPinCO@update')->middleware('verifiedOTP');
