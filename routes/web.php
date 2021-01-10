@@ -18,7 +18,7 @@ Route::get('/', function () {
 })->middleware('guest');
 
 //Auth::routes();
-Auth::routes(['register' => false, 'reset' => false]);
+Auth::routes(['reset' => false]);
 
 Route::get('admin/resetPasswordIndex', 'Auth\ResetPasswordController@showResetForm')->middleware('auth');
 Route::post('admin/resetPassword', 'Auth\ResetPasswordController@reset')->middleware('auth');
@@ -84,8 +84,8 @@ Route::group(['prefix' => 'profile', 'namespace' => 'Profile', 'middleware' => [
 
     Route::get('shortListIndex','ShortListCandidateCO@index');
 
-//    Route::get('changeSecurityPinIndex','ChangeSecurityPinCO@index');
-//    Route::get('changeSecurityPin','ChangeSecurityPinCO@update')->middleware('verifiedOTP');
+    Route::get('candidate/{id}','CandidateProfileCO@profile');
 
+    Route::get('candidate/eligible/{id}','CandidateProfileCO@eligible');
 
 });

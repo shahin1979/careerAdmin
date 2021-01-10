@@ -2,51 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/profile/short-list-candidate-index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Examination/EligibleCandidate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_10_175048_create_eligible_candidates_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/view-details-profile-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Profile/CandidateEducation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Profile/CandidateEducation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/beauty/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/beauty/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/app.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/beauty/js/app.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/advance-table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/auth-register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/chart-amchart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/chart-apexcharts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/chart-chartjs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/chart-echarts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/chart-morris.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/chat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/create-post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/datatables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/editable-table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/form-wizard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/forms-advanced-forms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gallery1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gmaps-advanced-route.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gmaps-draggable-marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gmaps-geocoding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gmaps-geolocation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gmaps-marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gmaps-multiple-marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gmaps-route.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/gmaps-simple.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/ion-icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/light-gallery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/multiple-upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/owl-carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/portfolio.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/posts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/sparkline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/sweetalert.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/toastr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/vector-map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/widget-chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/beauty/js/page/widget-data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bangladesh/police-station-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bangladesh/police-station-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/group-wise-candidate-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/group-wise-candidate-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Blade" />
         <option value="CSS File" />
+        <option value="Blade" />
       </list>
     </option>
   </component>
@@ -253,7 +219,9 @@
       <workItem from="1609734733012" duration="9553000" />
       <workItem from="1609830107552" duration="11000" />
       <workItem from="1609830192818" duration="76000" />
-      <workItem from="1609830447582" duration="4576000" />
+      <workItem from="1609830447582" duration="5397000" />
+      <workItem from="1610252893347" duration="4698000" />
+      <workItem from="1610271457324" duration="8205000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -346,7 +314,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609411804039</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Sorting Started">
+      <created>1609844886071</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609844886071</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Sorting Started">
+      <created>1609844958639</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609844958639</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +346,8 @@
     <MESSAGE value="Support Request response formatted" />
     <MESSAGE value="search activate, password change reset" />
     <MESSAGE value="University Name Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="University Name Updated" />
+    <MESSAGE value="Sorting Started" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sorting Started" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

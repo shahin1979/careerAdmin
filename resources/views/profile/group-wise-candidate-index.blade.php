@@ -15,7 +15,7 @@
             <th style="width: 10%">Name</th>
             <th style="width: 15%">Address</th>
             <th style="width: 40%">Education</th>
-            <th style="width: 5%">Applied</th>
+{{--            <th style="width: 5%">Applied</th>--}}
             <th style="width: 15%">Documents</th>
         </tr>
 {{--        <tr>--}}
@@ -35,15 +35,18 @@
                 {!! $ed->examination->exam_name !!} : {!! $ed->exam_serial == 1 ? $ed->institute : ($ed->exam_serial ==2 ? $ed->institute : $ed->university->name) !!} : {!! $ed->result !!} Out of {!! $ed->total_cgpa !!} <br/>
                 @endforeach
             </td>
-            <td>{!! isset($row->application) ? 'Yes' : 'No' !!}</td>
-            <td><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[0]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
-                    Document
-                </a><br/>
-            <a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[1]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
-                    SSC
-                </a><br/>
-            <a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[2]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
-                    Last
+{{--            <td>{!! isset($row->application) ? 'Yes' : 'No' !!}</td>--}}
+{{--            <td><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[0]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">--}}
+{{--                    Document--}}
+{{--                </a><br/>--}}
+{{--            <a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[1]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">--}}
+{{--                    SSC--}}
+{{--                </a><br/>--}}
+{{--            <a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[2]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">--}}
+{{--                    Last--}}
+{{--                </a></td>--}}
+            <td><a href="{!! url('profile/candidate/'.$row->id) !!}" target = "_blank" class="btn btn-outline-primary">
+                    View Details
                 </a></td>
         </tr>
         @endforeach
