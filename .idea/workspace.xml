@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/EligibleCandidatesCO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile/eligible-candidates-index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/profile/rejected-candidates-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/ShortListCandidateCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/ShortListCandidateCO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Examination/EligibleCandidate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Examination/EligibleCandidate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Profile/CandidatePersonal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Profile/CandidatePersonal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/group-wise-candidate-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/group-wise-candidate-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/view-details-profile-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/view-details-profile-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +213,8 @@
       <workItem from="1610252893347" duration="4698000" />
       <workItem from="1610271457324" duration="8262000" />
       <workItem from="1610336950270" duration="8508000" />
-      <workItem from="1610362455056" duration="1659000" />
+      <workItem from="1610362455056" duration="1742000" />
+      <workItem from="1610365260106" duration="1758000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -340,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610281147610</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Manual verification Added">
+      <created>1610364143554</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610364143554</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +354,8 @@
     <MESSAGE value="search activate, password change reset" />
     <MESSAGE value="University Name Updated" />
     <MESSAGE value="Sorting Started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sorting Started" />
+    <MESSAGE value="Manual verification Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manual verification Added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

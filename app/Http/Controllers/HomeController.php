@@ -31,7 +31,7 @@ class HomeController extends Controller
     {
         $users= User::query()->count();
         $profiles = CandidatePersonal::query()->count();
-        $applications = CandidateAppliedJob::query()->count();
+        $applications = CandidateAppliedJob::query()->where('eligible',true)->count();
         $eligible = EligibleCandidate::query()->get();
 
 //        $applied = CandidatePersonal::query()->groupBy('pm_district_id','pm_police_station_id')
