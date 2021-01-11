@@ -11,8 +11,8 @@
                         <div class="row ">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                 <div class="card-content">
-                                    <h5 class="font-15">Open Job</h5>
-                                    <h2 class="mb-3 font-18">1</h2>
+                                    <h5 class="font-15">Job Title</h5>
+                                    <h2 class="mb-3 font-18">Probationary Officer</h2>
                                     <p class="mb-0"><span class="col-green"></span></p>
                                 </div>
                             </div>
@@ -35,8 +35,8 @@
                         <div class="row ">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                 <div class="card-content">
-                                    <h5 class="font-15"> Users</h5>
-                                    <h2 class="mb-3 font-18">{!! $users !!}</h2>
+                                    <h5 class="font-15">Applied</h5>
+                                    <h2 class="mb-3 font-18">{!! $applications !!}</h2>
                                     {{--                                                <p class="mb-0"><span class="col-orange"></span></p>--}}
                                 </div>
                             </div>
@@ -57,8 +57,8 @@
                         <div class="row ">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                 <div class="card-content">
-                                    <h5 class="font-15">Profile Registered</h5>
-                                    <h2 class="mb-3 font-18">{!! $profiles !!}</h2>
+                                    <h5 class="font-15">Eligible</h5>
+                                    <h2 class="mb-3 font-18">{!! $eligible->where('eligible',true)->count() !!}</h2>
                                     {{--                                                <p class="mb-0"><span class="col-green">18%</span>--}}
                                     {{--                                                    Increase</p>--}}
                                 </div>
@@ -80,8 +80,8 @@
                         <div class="row ">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                 <div class="card-content">
-                                    <h5 class="font-15">Applied</h5>
-                                    <h2 class="mb-3 font-18">{!! $applications !!}</h2>
+                                    <h5 class="font-15">Rejected</h5>
+                                    <h2 class="mb-3 font-18">{!! $eligible->where('eligible',false)->count() !!}</h2>
                                     {{--                                                <p class="mb-0"><span class="col-green">42%</span> Increase</p>--}}
                                 </div>
                             </div>

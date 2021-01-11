@@ -45,7 +45,7 @@
 {{--            <a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[2]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">--}}
 {{--                    Last--}}
 {{--                </a></td>--}}
-            <td><a href="{!! url('profile/candidate/'.$row->id) !!}" target = "_blank" class="btn btn-outline-primary">
+            <td><a href="{!! url('profile/candidate/'.$row->id) !!}" class="btn btn-outline-primary">
                     View Details
                 </a></td>
         </tr>

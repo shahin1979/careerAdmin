@@ -11,6 +11,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -53,6 +54,11 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
+        if(Auth::user()->role_id == 3)
+        {
+            return redirect()->back()->with('error','You do not have permission');
+        }
+
         $roles = Role::query()->where('id','<>',1)->pluck('name','id');
         return view('auth.register',compact('roles'));
     }

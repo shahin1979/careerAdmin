@@ -267,9 +267,10 @@
                         <a href="#" class="menu-toggle nav-link has-dropdown font-weight-bold text-dark"><i data-feather="copy"></i><span>Profile</span></a>
                         <ul class="dropdown-menu">
                             <li><a class="nav-link font-weight-bold text-dark" href="{!! url('profile/personalInfoIndex') !!}">Registered Profiles</a></li>
-                            <li><a class="nav-link font-weight-bold text-dark" href="{!! url('profile/shortListIndex') !!}">Short List</a></li>
-                            <li><a class="nav-link font-weight-bold text-dark" href="#">Applications</a></li>
-                            <li><a class="nav-link font-weight-bold text-dark" href="#">Eligible Candidates</a></li>
+                            <li><a class="nav-link font-weight-bold text-dark" href="{!! url('profile/shortListIndex') !!}">Search Eligible List</a></li>
+{{--                            <li><a class="nav-link font-weight-bold text-dark" href="#">Applications</a></li>--}}
+                            <li><a class="nav-link font-weight-bold text-dark" href="{!! url('profile/eligibleCandidatesIndex') !!}">Eligible Candidates</a></li>
+                            <li><a class="nav-link font-weight-bold text-dark" href="{!! url('profile/rejectCandidatesIndex') !!}">Rejected Candidates</a></li>
                             <li><a class="nav-link font-weight-bold text-dark" href="#">Exam Process</a></li>
                         </ul>
                     </li>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Examination\EligibleCandidate;
 use App\Models\Profile\CandidateAppliedJob;
 use App\Models\Profile\CandidatePersonal;
 use App\Models\User;
@@ -31,6 +32,7 @@ class HomeController extends Controller
         $users= User::query()->count();
         $profiles = CandidatePersonal::query()->count();
         $applications = CandidateAppliedJob::query()->count();
+        $eligible = EligibleCandidate::query()->get();
 
 //        $applied = CandidatePersonal::query()->groupBy('pm_district_id','pm_police_station_id')
 
@@ -69,6 +71,6 @@ class HomeController extends Controller
 
 //        return view('home',compact('users','profiles','applications'));
 
-        return view('dashboard',compact('users','profiles','applications','applied'));
+        return view('dashboard',compact('users','profiles','applications','applied','eligible'));
     }
 }

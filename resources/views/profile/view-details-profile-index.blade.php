@@ -12,7 +12,9 @@
 
     @isset($profile)
 
-
+        {!! Form::open(['url'=>'profile/eligible/'.$profile->id,'method'=>'get']) !!}
+        @csrf
+        @include('partials.error-msg')
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 justify-content-center">
@@ -225,10 +227,15 @@
                                     <td>Organization</td>
                                     <td>{!! $profile->reference[1]->email !!}</td>
                                 </tr>
+                                <tr>
+                                    <td>Remarks</td>
+                                    <td colspan="3"><input id="remarks" type="text" class="form-control" name="remarks" value=""></td>
+                                </tr>
+
 
                                 <tr>
-                                    <td colspan="2"><button type="submit" id="btn-approve" class="btn btn-primary btn-approve">Approve</button></td>
-                                    <td colspan="2" class="text-right"><button type="submit" id="btn-reject" class="btn btn-danger btn-reject pull-right">Reject</button></td>
+                                    <td colspan="2"><button type="submit" id="btn-approve" name="action" value="approve" class="btn btn-primary btn-approve">Approve</button></td>
+                                    <td colspan="2" class="text-right"><button type="submit" name="action" value="reject" id="btn-reject" class="btn btn-danger btn-reject pull-right">Reject</button></td>
                                 </tr>
 
                                 </tbody>
@@ -237,45 +244,45 @@
                     </div>
                 </div>
 
-                <input name="profile_id" type="hidden" id="profile_id" value="{!! $profile->id !!}">
             </div>
         </div>
+        {!! Form::close() !!}
     @endisset
 @endsection
 
 @push('scripts')
 
-    <script>
+{{--    <script>--}}
 
-        $(document).on('click', '.btn-approve', function (e) {
+{{--        $(document).on('click', '.btn-approve', function (e) {--}}
 
-            e.preventDefault();
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
+{{--            e.preventDefault();--}}
+{{--            $.ajaxSetup({--}}
+{{--                headers: {--}}
+{{--                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
+{{--                }--}}
+{{--            });--}}
 
-            // confirm then
-            $.ajax({
-                beforeSend: function (request) {
-                    return confirm("Are you sure?");
-                },
-                url: 'eligible/'+ $('#profile_id').val(),
-                type: 'GET',
-                dataType: 'json',
-                data: {method: '_GET', submit: true},
+{{--            // confirm then--}}
+{{--            $.ajax({--}}
+{{--                beforeSend: function (request) {--}}
+{{--                    return confirm("Are you sure?");--}}
+{{--                },--}}
+{{--                url: 'eligible/'+ $('#profile_id').val(),--}}
+{{--                type: 'GET',--}}
+{{--                dataType: 'json',--}}
+{{--                data: {method: '_GET', submit: true, remarks:$('#remarks').val()},--}}
 
-                error: function (request, status, error) {
-                    alert(request.responseText);
-                },
-                success: function (data) {
-                    alert('success')
-                }
-            })
-        });
+{{--                error: function (request, status, error) {--}}
+{{--                    alert(request.responseText);--}}
+{{--                },--}}
+{{--                success: function (data) {--}}
+{{--                    alert('success')--}}
+{{--                }--}}
+{{--            })--}}
+{{--        });--}}
 
-    </script>
+{{--    </script>--}}
 
 
 @endpush

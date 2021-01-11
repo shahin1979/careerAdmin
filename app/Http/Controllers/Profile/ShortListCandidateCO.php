@@ -25,7 +25,10 @@ class ShortListCandidateCO extends Controller
 
             $params = null;
 
-            $query = CandidatePersonal::query()->where('status',true);
+            $query = CandidatePersonal::query()->where('status',true)
+            ->whereHas('eligible',function ($q){
+                $q->where('eligible',true);
+            });
 
             if($request->filled('pm_district_id'))
             {

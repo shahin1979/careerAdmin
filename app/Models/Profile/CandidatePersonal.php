@@ -5,6 +5,7 @@ namespace App\Models\Profile;
 use App\Models\Bangladesh\District;
 use App\Models\Bangladesh\PoliceStation;
 use App\Models\Common\Religion;
+use App\Models\Examination\EligibleCandidate;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -55,5 +56,9 @@ class CandidatePersonal extends Model
     public function religion()
     {
         return $this->belongsTo(Religion::class,'religion_id','id');
+    }
+    public function eligible()
+    {
+        return $this->hasOne(EligibleCandidate::class,'candidate_id','id');
     }
 }
