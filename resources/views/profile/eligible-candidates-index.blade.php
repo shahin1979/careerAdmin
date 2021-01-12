@@ -14,7 +14,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Eligible Candidate List</h4>
+                    <h4>Eligible Candidate List : Total: {!! $eligible->count() !!}</h4>
                     <div class="card-header-form">
                         <form>
                             <div class="input-group">
@@ -39,13 +39,12 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($eligible as $row)
-                                <tr>
+                            @foreach($eligible as $i=>$row)
+                                <tr style="background-color: {!! $i%2 == 0 ? '#fcebf5' : 'rgba(44,221,32,0.1)' !!}">
                                     <td><img src="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->photo !!}" height="50px" width="50px"></td>
                                     <td>{!! $row->name !!}</td>
-                                    <td>{!! $row->pm_address !!} <br/>{!! $row->pm_post_office !!}
-                                        <br/>{!! $row->pm_thana->name !!}
-                                        <br/>{!! $row->pm_district->name !!}</td>
+                                    <td>{!! $row->pm_address !!} : {!! $row->pm_post_office !!}
+                                        <br/>{!! $row->pm_thana->name !!},{!! $row->pm_district->name !!}</td>
                                     <td>{!! $row->eligible->user->name !!}</td>
                                     <td>{!! $row->eligible->verified_date !!}</td>
                                 </tr>

@@ -4,29 +4,6 @@
     <script src="{!! asset('assets/js/jquery-3.3.1.min.js') !!}"></script>
     @include('partials.error-msg')
     <div class="row ">
-        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="card">
-                <div class="card-statistic-4">
-                    <div class="align-items-center justify-content-between">
-                        <div class="row ">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
-                                <div class="card-content">
-                                    <h5 class="font-15">Job Title</h5>
-                                    <h2 class="mb-3 font-18">Probationary Officer</h2>
-                                    <p class="mb-0"><span class="col-green"></span></p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
-                                <div class="banner-img">
-                                    <img src="{!! asset('beauty/img/banner/1.png') !!}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="card">
@@ -95,6 +72,30 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="card">
+                <div class="card-statistic-4">
+                    <div class="align-items-center justify-content-between">
+                        <div class="row ">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
+                                <div class="card-content">
+                                    <h5 class="font-15">To Be Verified</h5>
+                                    <h2 class="mb-3 font-18">{!! $applications - $eligible->count() !!}</h2>
+                                    <p class="mb-0"><span class="col-green"></span></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                                <div class="banner-img">
+                                    <img src="{!! asset('beauty/img/banner/1.png') !!}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -122,7 +123,7 @@
                                 <th>Name of District</th>
                                 <th>Police Station</th>
 {{--                                <th>Gender</th>--}}
-                                <th class="text-right">No of Applicant</th>
+                                <th class="text-right">Applicants <br/>To Verify</th>
                                 <th class="text-right">Action</th>
                             </tr>
                             </thead>
