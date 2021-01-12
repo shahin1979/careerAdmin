@@ -34,8 +34,9 @@
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>Address</th>
+                                <th>Result</th>
                                 <th>Verified By</th>
-                                <th>Verified Date</th>
+{{--                                <th>Verified Date</th>--}}
                             </tr>
                             </thead>
                             <tbody>
@@ -43,10 +44,14 @@
                                 <tr style="background-color: {!! $i%2 == 0 ? '#fcebf5' : 'rgba(44,221,32,0.1)' !!}">
                                     <td><img src="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->photo !!}" height="50px" width="50px"></td>
                                     <td>{!! $row->name !!}</td>
-                                    <td>{!! $row->pm_address !!} : {!! $row->pm_post_office !!}
-                                        <br/>{!! $row->pm_thana->name !!},{!! $row->pm_district->name !!}</td>
+                                    <td>{!! $row->pm_address !!} <br/> {!! $row->pm_post_office !!}
+                                        ,{!! $row->pm_thana->name !!},{!! $row->pm_district->name !!}</td>
+                                    <td style="border-bottom-color: red; border-bottom-width: 1px">@foreach($row->education as $ed)
+                                            {!! $ed->examination->exam_name !!} : {!! $ed->result !!} Out of {!! $ed->total_cgpa !!} <br/>
+                                        @endforeach
+                                    </td>
                                     <td>{!! $row->eligible->user->name !!}</td>
-                                    <td>{!! $row->eligible->verified_date !!}</td>
+{{--                                    <td>{!! $row->eligible->verified_date !!}</td>--}}
                                 </tr>
                             @endforeach
                             </tbody>

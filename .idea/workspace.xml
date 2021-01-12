@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/eligible-candidates-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/eligible-candidates-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/rejected-candidates-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/rejected-candidates-index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +215,8 @@
       <workItem from="1610336950270" duration="8508000" />
       <workItem from="1610362455056" duration="1742000" />
       <workItem from="1610365260106" duration="1777000" />
-      <workItem from="1610423703993" duration="4590000" />
+      <workItem from="1610423703993" duration="4667000" />
+      <workItem from="1610433153594" duration="1026000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -346,7 +344,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610367360165</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Manual verification continue">
+      <created>1610433035336</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610433035336</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Manual verification continue">
+      <created>1610433087864</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1610433087864</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +378,8 @@
     <MESSAGE value="University Name Updated" />
     <MESSAGE value="Sorting Started" />
     <MESSAGE value="Manual verification Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manual verification Added" />
+    <MESSAGE value="Manual verification continue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manual verification continue" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
