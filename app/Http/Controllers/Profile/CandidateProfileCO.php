@@ -82,7 +82,7 @@ class CandidateProfileCO extends Controller
 
                     $age = $this->ageCalculator($profile->dob);
 
-                    if($age > 30)
+                    if($profile->dob < '1991-01-10')
                     {
                         return redirect()->back()->withErrors(['error' => 'Applicants age is greater than 30']);
                     }
@@ -178,7 +178,8 @@ class CandidateProfileCO extends Controller
         if(!empty($dob)){
             $birthdate = new \DateTime($dob);
             $today   = new \DateTime('2021-01-10');
-            $age = $birthdate->diff($today)->y;
+            $diff = $birthdate->diff($today);
+            $age = $diff->y.'Years '. $diff->m.'Month '.$diff->d.'Days';
             return $age;
         }else{
             return 0;

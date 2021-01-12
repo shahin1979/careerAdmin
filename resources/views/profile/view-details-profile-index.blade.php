@@ -29,7 +29,7 @@
                                     <td class="text-danger font-weight-bold">{!! $profile->name !!}</td>
                                     <td colspan="1"><img src="http://erecruitment.nrbglobalbank.com/careerPortal{!! $profile->photo !!}" height="50px" width="50px"></td>
                                     <td>Birth Date</td>
-                                    <td>{!! \Carbon\Carbon::parse($profile->dob)->format('d-M-Y') !!} <h5 class="text-danger">Age: {!! $age !!} Years</h5></td>
+                                    <td>{!! \Carbon\Carbon::parse($profile->dob)->format('d-M-Y') !!} <h5 class="text-danger">Age: {!! $age !!}</h5></td>
                                 </tr>
 
                                 <tr>
