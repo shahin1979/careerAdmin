@@ -15,7 +15,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Rejected Candidate List</h4>
+                    <h4>Rejected Candidate List - Total: {!! $rejects->count() !!}</h4>
                     <div class="card-header-form">
                         <form>
                             <div class="input-group">
