@@ -7,7 +7,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb" style="background-color: rgba(44,221,32,0.1); margin-bottom: 0.5rem">
             <li class="breadcrumb-item"><a class="white-text" href="{!! url('home') !!}">Home</a></li>
-            <li class="breadcrumb-item active">Short List</li>
+            <li class="breadcrumb-item active">Short List Eligible Candidates</li>
         </ol>
     </nav>
 
@@ -23,9 +23,9 @@
 
             <tr>
                 <td><label for="name" class="control-label">Name</label></td>
-                <td><input id="name" type="text" class="form-control" name="name" value=""></td>
+                <td><input id="name" type="text" class="form-control" name="name"></td>
                 <td><label for="mobile" class="control-label">Mobile No</label></td>
-                <td><input id="mobile" type="text" class="form-control" name="mobile" value=""></td>
+                <td><input id="mobile" type="text" class="form-control" name="mobile"></td>
             </tr>
 
             <tr>
@@ -93,7 +93,6 @@
                 <th style="width: 10%">Name</th>
                 <th style="width: 15%">Address</th>
                 <th style="width: 40%">Education</th>
-                <th style="width: 5%">Applied</th>
                 <th style="width: 15%">Documents</th>
             </tr>
             {{--        <tr>--}}
@@ -108,12 +107,17 @@
                     <td>{!! $i+1 !!}</td>
                     <td><img src="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->photo !!}" height="50px" width="50px"></td>
                     <td>{!! $row->name !!}</td>
-                    <td style="width: 15%">{!! $row->pm_address !!}</td>
+{{--                    <td style="width: 15%">{!! $row->pm_address !!}</td>--}}
+
+                    <td>{!! $row->pm_address !!} <br/>{!! $row->pm_post_office !!}
+                                                            <br/>{!! $row->pm_thana->name !!}
+                                                            <br/>{!! $row->pm_district->name !!}</td>
+
+
                     <td style="border-bottom-color: red; border-bottom-width: 1px">@foreach($row->education as $ed)
                             {!! $ed->examination->exam_name !!} : {!! $ed->exam_serial == 1 ? $ed->institute : ($ed->exam_serial ==2 ? $ed->institute : $ed->university->name) !!} : {!! $ed->result !!} Out of {!! $ed->total_cgpa !!} <br/>
                         @endforeach
                     </td>
-                    <td>{!! isset($row->application) ? 'Yes' : 'No' !!}</td>
                     <td><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[0]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
                             Document
                         </a><br/>

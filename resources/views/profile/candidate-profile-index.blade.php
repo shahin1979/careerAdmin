@@ -36,7 +36,7 @@
                 {{--            <table style="width:100%" class="table table-bordered table-hover table-responsive" id="stations-table">--}}
                 <thead style="background-color: #b0b0b0">
                 <tr>
-                    <th>ID</th>
+                    <th>Tracking No</th>
                     <th>Name</th>
                     <th>Address</th>
                     <th>District</th>
@@ -115,9 +115,9 @@
                 responsive: true,
                 ajax: 'getProfiles',
                 columns: [
-                    { data: 'id', name: 'id' },
+                    { data: 'profile_id', name: 'profile_id' },
                     { data: 'name', name: 'name' },
-                    { data: 'pm_address', name: 'pm_address' },
+                    { data: 'address', name: 'address' },
                     { data: 'pm_district.name', name: 'pm_district.name' },
                     { data: 'mobile', name: 'mobile' },
                     { data: 'action', name: 'action', orderable: false, searchable: false, printable: false}
@@ -139,12 +139,10 @@
                 }
             });
 
-
-
             $(this).on('click', '.btn-details', function (e) {
-
                 e.preventDefault();
-                location.window = 'candidate/groupIndex'
+                var url = $(this).data('remote');
+                window.location.href = url;
             });
         });
 

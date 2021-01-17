@@ -90,6 +90,7 @@ Route::group(['prefix' => 'profile', 'namespace' => 'Profile', 'middleware' => [
 
     Route::get('eligibleCandidatesIndex','EligibleCandidatesCO@index');
     Route::get('getEligible','EligibleCandidatesCO@getEligible');
+    Route::get('getRejected','EligibleCandidatesCO@getRejected');
 
     Route::get('details/{id}','EligibleCandidatesCO@details');
 

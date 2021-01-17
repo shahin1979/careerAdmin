@@ -6,7 +6,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb" style="background-color: rgba(44,221,32,0.1); margin-bottom: 0.5rem">
             <li class="breadcrumb-item"><a class="white-text" href="{!! url('home') !!}">Home</a></li>
-            <li class="breadcrumb-item active">Candidiate Details</li>
+            <li class="breadcrumb-item active">Candidate Details</li>
         </ol>
     </nav>
 
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-12 justify-content-center">
                     <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-                        <div class="card-header"><h4>Personal Information</h4></div>
+                        <div class="card-header"><h4>Personal Information : Tracking No : {!! $profile->profile_id !!}</h4></div>
                         <div class="card-body">
                             <table class="table table-bordered table-striped">
                                 <tbody>

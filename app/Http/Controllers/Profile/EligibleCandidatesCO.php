@@ -69,6 +69,35 @@ class EligibleCandidatesCO extends Controller
 
     }
 
+    public function getRejected()
+    {
+        $eligible = CandidatePersonal::query()->whereHas('eligible',function ($q){
+            $q->where('eligible',false);
+        })->with('eligible','education','pm_district','pm_thana')->select('candidate_personals.*');
+
+        return DataTables::of($eligible)
+
+            ->addColumn('education', function ($eligible) {
+                return $eligible->education->map(function($items) {
+                    return $items->examination->exam_name.' : '. $items->result. ' Out of '. $items->total_cgpa;
+                })->implode('<br>');
+            })
+
+            ->addColumn('address', function ($eligible) {
+                return $eligible->pm_address.'<br/> Post Office : '.$eligible->pm_post_office. '<br/> Thana : '.$eligible->pm_thana->name;
+            })
+
+            ->addColumn('action', function ($eligible) {
+                return '<div class="btn-group-sm" role="group" aria-label="Action Button">
+                    <button data-remote="details/' . $eligible->id . '" data-rowid="'. $eligible->id . '"
+                        type="button" class="btn btn-sm btn-details btn-primary" >Details</button>
+                    </div>
+                    ';
+            })
+            ->rawColumns(['action','education','address'])
+            ->make(true);
+    }
+
     public function reject()
     {
         $rejects = CandidatePersonal::query()->whereHas('eligible',function ($q){

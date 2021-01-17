@@ -15,7 +15,7 @@
             {{--            <table style="width:100%" class="table table-bordered table-hover table-responsive" id="stations-table">--}}
             <thead style="background-color: #b0b0b0">
             <tr>
-{{--                <th>ID</th>--}}
+                <th>Tracking</th>
                 <th>Name</th>
                 <th>Address</th>
                 <th>District</th>
@@ -96,6 +96,7 @@
                 responsive: true,
                 ajax: 'getEligible',
                 columns: [
+                    { data: 'profile_id', name: 'profile_id' },
                     { data: 'name', name: 'name' },
                     { data: 'address', name: 'address' },
                     { data: 'pm_district.name', name: 'pm_district.name' },

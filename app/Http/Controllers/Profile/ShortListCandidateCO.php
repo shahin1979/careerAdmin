@@ -33,7 +33,11 @@ class ShortListCandidateCO extends Controller
             if($request->filled('name'))
             {
                 $query->where('name','LIKE','%'.$request['name'].'%');
-//                $params['district'] = District::query()->where('id',$request['pm_district_id'])->first()->name;
+            }
+
+            if($request->filled('mobile'))
+            {
+                $query->where('mobile','LIKE','%'.$request['mobile'].'%');
             }
 
             if($request->filled('pm_district_id'))

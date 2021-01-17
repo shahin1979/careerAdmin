@@ -29,12 +29,15 @@ class CandidateProfileCO extends Controller
 
             ->addColumn('action', function ($profiles) {
                 return '<div class="btn-group-sm" role="group" aria-label="Action Button">
-                    <button data-remote="edit/' . $profiles->id . '" data-rowid="'. $profiles->id . '"
-                        type="button" class="btn btn-sm btn-branch-edit btn-primary" >Details</button>
+                    <button data-remote="details/' . $profiles->id . '" data-rowid="'. $profiles->id . '"
+                        type="button" class="btn btn-sm btn-details btn-primary" >Details</button>
                     </div>
                     ';
             })
-            ->rawColumns(['action'])
+            ->addColumn('address', function ($profiles) {
+                return $profiles->pm_address.'<br/> Post Office : '.$profiles->pm_post_office. '<br/> Thana : '.$profiles->pm_thana->name;
+            })
+            ->rawColumns(['action','address'])
             ->make(true);
     }
 
