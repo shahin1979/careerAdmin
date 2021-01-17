@@ -22,6 +22,13 @@
             <tbody>
 
             <tr>
+                <td><label for="name" class="control-label">Name</label></td>
+                <td><input id="name" type="text" class="form-control" name="name" value=""></td>
+                <td><label for="mobile" class="control-label">Mobile No</label></td>
+                <td><input id="mobile" type="text" class="form-control" name="mobile" value=""></td>
+            </tr>
+
+            <tr>
                 <td><label for="pm_district_id" class="control-label">Permanent Address District</label></td>
                 <td>{!! Form::select('pm_district_id',$districts,null,array('id'=>'pm_district_id','class'=>'form-control','placeholder'=>'Select District')) !!}</td>
                 <td><label for="pm_police_station_id" class="control-label">Permanent Address Thana</label></td>

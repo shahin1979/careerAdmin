@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/candidate-details-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/CandidateProfileCO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/view-details-profile-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/view-details-profile-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/EligibleCandidatesCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/EligibleCandidatesCO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/ShortListCandidateCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/ShortListCandidateCO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/eligible-candidates-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/eligible-candidates-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/short-list-candidate-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/short-list-candidate-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +223,8 @@
       <workItem from="1610365260106" duration="1777000" />
       <workItem from="1610423703993" duration="4667000" />
       <workItem from="1610433153594" duration="1041000" />
-      <workItem from="1610441037637" duration="1570000" />
+      <workItem from="1610441037637" duration="1974000" />
+      <workItem from="1610857470870" duration="6273000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -367,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610434444963</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Manual verification continue">
+      <created>1610442612653</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1610442612654</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
