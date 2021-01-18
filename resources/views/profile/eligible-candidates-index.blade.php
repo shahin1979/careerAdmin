@@ -20,7 +20,7 @@
                 <th>Address</th>
                 <th>District</th>
                 <th>Education</th>
-                <th>Phone</th>
+                <th>Verified By</th>
                 <th class="text-right">Action</th>
             </tr>
             </thead>
@@ -101,7 +101,7 @@
                     { data: 'address', name: 'address' },
                     { data: 'pm_district.name', name: 'pm_district.name' },
                     { data: 'education', name: 'education' },
-                    { data: 'mobile', name: 'mobile' },
+                    { data: 'eligible.user.name', name: 'eligible.user.name' },
                     { data: 'action', name: 'action', orderable: false, searchable: false, printable: false}
                 ],
                 columnDefs: [

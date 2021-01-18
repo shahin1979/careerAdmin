@@ -111,7 +111,7 @@
                     { data: 'address', name: 'address' },
                     { data: 'pm_district.name', name: 'pm_district.name' },
                     { data: 'education', name: 'education' },
-                    { data: 'eligible.remarks', name: 'eligible.remarks' },
+                    { data: 'rejected', name: 'rejected' },
                     { data: 'action', name: 'action', orderable: false, searchable: false, printable: false}
                 ],
                 columnDefs: [

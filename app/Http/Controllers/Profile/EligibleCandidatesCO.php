@@ -28,7 +28,7 @@ class EligibleCandidatesCO extends Controller
     {
         $eligible = CandidatePersonal::query()->whereHas('eligible',function ($q){
             $q->where('eligible',true);
-        })->with('eligible','education','pm_district','pm_thana')->select('candidate_personals.*');
+        })->with('eligible.user','education','pm_district','pm_thana')->select('candidate_personals.*');
 
         return DataTables::of($eligible)
 
@@ -73,7 +73,7 @@ class EligibleCandidatesCO extends Controller
     {
         $eligible = CandidatePersonal::query()->whereHas('eligible',function ($q){
             $q->where('eligible',false);
-        })->with('eligible','education','pm_district','pm_thana')->select('candidate_personals.*');
+        })->with('eligible.user','education','pm_district','pm_thana')->select('candidate_personals.*');
 
         return DataTables::of($eligible)
 
@@ -81,6 +81,10 @@ class EligibleCandidatesCO extends Controller
                 return $eligible->education->map(function($items) {
                     return $items->examination->exam_name.' : '. $items->result. ' Out of '. $items->total_cgpa;
                 })->implode('<br>');
+            })
+
+            ->addColumn('rejected', function ($eligible) {
+                return '<div class="text-danger">'. $eligible->eligible->remarks.'</div><br/>Rejected By : '.$eligible->eligible->user->name;
             })
 
             ->addColumn('address', function ($eligible) {
@@ -94,7 +98,7 @@ class EligibleCandidatesCO extends Controller
                     </div>
                     ';
             })
-            ->rawColumns(['action','education','address'])
+            ->rawColumns(['action','education','address','rejected'])
             ->make(true);
     }
 
