@@ -7,7 +7,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb" style="background-color: rgba(44,221,32,0.1); margin-bottom: 0.5rem">
             <li class="breadcrumb-item"><a class="white-text" href="{!! url('home') !!}">Home</a></li>
-            <li class="breadcrumb-item active">Short List Eligible Candidates</li>
+            <li class="breadcrumb-item active">Search Verified Candidates</li>
         </ol>
     </nav>
 
@@ -65,6 +65,13 @@
                 <td><input id="grade_point_pg_from" type="text" class="form-control" name="grade_point_pg_from" value=""></td>
             </tr>
 
+            <tr>
+                <td><label for="verified_by" class="control-label">Verified By</label></td>
+                <td>{!! Form::select('verified_by',$users,null,array('id'=>'verified_by','class'=>'form-control','placeholder'=>'Select User')) !!}</td>
+                <td></td>
+                <td></td>
+            </tr>
+
 {{--            <tr>--}}
 {{--                <td><label for="name" class="control-label">GPA Post Graduation</label></td>--}}
 {{--                <td><input id="grade_point_ssc" type="text" class="form-control" name="grade_point_ssc" value=""></td>--}}
@@ -93,6 +100,7 @@
                 <th style="width: 10%">Name</th>
                 <th style="width: 15%">Address</th>
                 <th style="width: 40%">Education</th>
+                <th style="width: 40%">Eligible</th>
                 <th style="width: 15%">Documents</th>
             </tr>
             {{--        <tr>--}}
@@ -118,6 +126,12 @@
                             {!! $ed->examination->exam_name !!} : {!! $ed->exam_serial == 1 ? $ed->institute : ($ed->exam_serial ==2 ? $ed->institute : $ed->university->name) !!} : {!! $ed->result !!} Out of {!! $ed->total_cgpa !!} <br/>
                         @endforeach
                     </td>
+                    @if($row->eligible->eligible == true)
+                    <td class="text-dark">{!! $row->eligible->eligible == true ? 'Eligible' : 'Rejected' !!}</td>
+                    @else
+                        <td class="text-danger">Rejected</td>
+                    @endif
+
                     <td><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[0]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
                             Document
                         </a><br/>

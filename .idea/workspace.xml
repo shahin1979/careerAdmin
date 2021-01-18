@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/EligibleCandidatesCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/EligibleCandidatesCO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/eligible-candidates-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/eligible-candidates-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/rejected-candidates-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/rejected-candidates-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/ShortListCandidateCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/ShortListCandidateCO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/short-list-candidate-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/short-list-candidate-index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +223,8 @@
       <workItem from="1610857470870" duration="6395000" />
       <workItem from="1610878658721" duration="4614000" />
       <workItem from="1610953462235" duration="601000" />
-      <workItem from="1610959384661" duration="1546000" />
+      <workItem from="1610959384661" duration="1583000" />
+      <workItem from="1610964246243" duration="2630000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -393,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610886700968</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Manual verification continue">
+      <created>1610961770028</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1610961770029</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

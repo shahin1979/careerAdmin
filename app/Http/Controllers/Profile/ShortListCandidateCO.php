@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use App\Models\Bangladesh\District;
 use App\Models\Bangladesh\PoliceStation;
 use App\Models\Education\Subject;
@@ -18,17 +19,30 @@ class ShortListCandidateCO extends Controller
         $thanas = PoliceStation::query()->pluck('name','id');
         $universities = University::query()->pluck('name','id');
         $subjects = Subject::query()->pluck('name','id');
+        $users = Admin::query()->whereNotIn('id',[1,2,3,5]) ->pluck('name','id');
+
         if(isset($request['search_id']))
         {
 
-//            dd($request->all());
-
             $params = null;
 
+//            $query = CandidatePersonal::query()->where('status',true)
+//            ->whereHas('eligible',function ($q){
+//                $q->where('eligible',true);
+//            });
+
             $query = CandidatePersonal::query()->where('status',true)
-            ->whereHas('eligible',function ($q){
-                $q->where('eligible',true);
-            });
+                ->whereHas('eligible');
+
+
+            if($request->filled('verified_by'))
+            {
+                $user_id = $request['verified_by'];
+                $query->whereHas('eligible',function ($q) use ($user_id){
+                    $q->where('verified_by',$user_id);
+                });
+            }
+
 
             if($request->filled('name'))
             {
@@ -149,7 +163,7 @@ class ShortListCandidateCO extends Controller
         }
 //        return view('profile.test');
 //
-        return view('profile.short-list-candidate-index',compact('districts','thanas','universities','subjects'));
+        return view('profile.short-list-candidate-index',compact('districts','thanas','universities','subjects','users'));
     }
 
     public function ageCalculator($dob){
