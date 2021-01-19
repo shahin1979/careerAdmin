@@ -68,8 +68,8 @@
             <tr>
                 <td><label for="verified_by" class="control-label">Verified By</label></td>
                 <td>{!! Form::select('verified_by',$users,null,array('id'=>'verified_by','class'=>'form-control','placeholder'=>'Select User')) !!}</td>
-                <td></td>
-                <td></td>
+                <td><label for="verified_as" class="control-label">Verified As</label></td>
+                <td>{!! Form::select('verified_as',[1=>'Eligible',0=>'Rejected'],null,array('id'=>'verified_as','class'=>'form-control','placeholder'=>'Select Eligibility')) !!}</td>
             </tr>
 
 {{--            <tr>--}}
@@ -127,9 +127,9 @@
                         @endforeach
                     </td>
                     @if($row->eligible->eligible == true)
-                    <td class="text-dark">{!! $row->eligible->eligible == true ? 'Eligible' : 'Rejected' !!}</td>
+                    <td class="text-dark">Eligible</td>
                     @else
-                        <td class="text-danger">Rejected</td>
+                        <td class="text-danger">Rejected <br/>{!! $row->eligible->remarks !!}</td>
                     @endif
 
                     <td><a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[0]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">

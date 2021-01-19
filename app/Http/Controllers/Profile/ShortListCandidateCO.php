@@ -43,6 +43,14 @@ class ShortListCandidateCO extends Controller
                 });
             }
 
+            if($request->filled('verified_as'))
+            {
+                $status = $request['verified_as'];
+                $query->whereHas('eligible',function ($q) use ($status){
+                    $q->where('eligible',$status);
+                });
+            }
+
 
             if($request->filled('name'))
             {
