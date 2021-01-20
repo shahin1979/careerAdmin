@@ -90,32 +90,32 @@ class CandidateProfileCO extends Controller
                         return redirect()->back()->withErrors(['error' => 'Applicants age is greater than 30']);
                     }
 
-                    foreach ($profile->education as $row)
-                    {
-                        //Check SSC Result
-                        if($row->exam_serial == 1 and $row->result_type == 'G' and $row->result < 4.00)
-                        {
-                            return redirect()->back()->withErrors(['error' => 'Applicant SSC result is below the requirements']);
-                        }
-                        if($row->exam_serial == 1 and $row->result_type == 'C' and $row->result > 1.00)
-                        {
-                            return redirect()->back()->withErrors(['error' => 'Applicant SSC result is below the requirements']);
-//                            return response()->json(['error' => 'Applicant SSC result is below the requirements'], 404);
-                        }
-
-                        //Check HSC Result
-
-                        if($row->exam_serial == 2 and $row->result_type == 'G' and $row->result < 4.00)
-                        {
-                            return redirect()->back()->withErrors(['error' => 'Applicant HSC result is below the requirements']);
-//                            return response()->json(['error' => 'Applicant HSC result is below the requirements'], 404);
-                        }
-                        if($row->exam_serial == 2 and $row->result_type == 'C' and $row->result > 1.00)
-                        {
-                            return redirect()->back()->withErrors(['error' => 'Applicant HSC result is below the requirements']);
-//                            return response()->json(['error' => 'Applicant HSC result is below the requirements'], 404);
-                        }
-                    }
+//                    foreach ($profile->education as $row)
+//                    {
+//                        //Check SSC Result
+//                        if($row->exam_serial == 1 and $row->result_type == 'G' and $row->result < 4.00)
+//                        {
+//                            return redirect()->back()->withErrors(['error' => 'Applicant SSC result is below the requirements']);
+//                        }
+//                        if($row->exam_serial == 1 and $row->result_type == 'C' and $row->result > 1.00)
+//                        {
+//                            return redirect()->back()->withErrors(['error' => 'Applicant SSC result is below the requirements']);
+////                            return response()->json(['error' => 'Applicant SSC result is below the requirements'], 404);
+//                        }
+//
+//                        //Check HSC Result
+//
+//                        if($row->exam_serial == 2 and $row->result_type == 'G' and $row->result < 4.00)
+//                        {
+//                            return redirect()->back()->withErrors(['error' => 'Applicant HSC result is below the requirements']);
+////                            return response()->json(['error' => 'Applicant HSC result is below the requirements'], 404);
+//                        }
+//                        if($row->exam_serial == 2 and $row->result_type == 'C' and $row->result > 1.00)
+//                        {
+//                            return redirect()->back()->withErrors(['error' => 'Applicant HSC result is below the requirements']);
+////                            return response()->json(['error' => 'Applicant HSC result is below the requirements'], 404);
+//                        }
+//                    }
 
                     EligibleCandidate::query()->insert([
                         'candidate_id'=>$profile->id,
