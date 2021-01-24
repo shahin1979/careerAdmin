@@ -106,7 +106,7 @@
                 responsive: true,
                 ajax: 'getRejected',
                 columns: [
-                    { data: 'profile_id', name: 'profile_id' },
+                    { data: 'id', name: 'id' },
                     { data: 'name', name: 'name' },
                     { data: 'address', name: 'address' },
                     { data: 'pm_district.name', name: 'pm_district.name' },
