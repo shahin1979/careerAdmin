@@ -18,6 +18,7 @@
                 <th>Name</th>
                 <th>Address</th>
                 <th>District</th>
+                <th>Eligible</th>
                 <th>Education</th>
                 <th>Reason</th>
                 <th class="text-right">Action</th>
@@ -110,6 +111,7 @@
                     { data: 'name', name: 'name' },
                     { data: 'address', name: 'address' },
                     { data: 'pm_district.name', name: 'pm_district.name' },
+                    { data: 'eligible', name: 'eligible' },
                     { data: 'education', name: 'education' },
                     { data: 'rejected', name: 'rejected' },
                     { data: 'action', name: 'action', orderable: false, searchable: false, printable: false}

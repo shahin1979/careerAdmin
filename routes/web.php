@@ -96,5 +96,7 @@ Route::group(['prefix' => 'profile', 'namespace' => 'Profile', 'middleware' => [
 
     Route::get('rejectCandidatesIndex','EligibleCandidatesCO@reject');
 
+    Route::get('makeEligible/{id}','EligibleCandidatesCO@makeEligible');
+
 
 });

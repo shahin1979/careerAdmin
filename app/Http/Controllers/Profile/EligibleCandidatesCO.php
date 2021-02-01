@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Profile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Examination\EligibleCandidate;
 use App\Models\Profile\CandidateAppliedJob;
 use App\Models\Profile\CandidatePersonal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\DataTables;
 
 class EligibleCandidatesCO extends Controller
@@ -91,14 +93,22 @@ class EligibleCandidatesCO extends Controller
                 return $eligible->pm_address.'<br/> Post Office : '.$eligible->pm_post_office. '<br/> Thana : '.$eligible->pm_thana->name;
             })
 
+            ->addColumn('eligible', function ($eligible) {
+                return '<div class="btn-group-sm" role="group" aria-label="Action Button">
+                    <button data-remote="makeEligible/' . $eligible->id . '" data-rowid="'. $eligible->id . '"
+                        type="button" class="btn btn-sm btn-details btn-danger" >Eligible</button>
+                    </div>
+                    ';
+            })
+
             ->addColumn('action', function ($eligible) {
                 return '<div class="btn-group-sm" role="group" aria-label="Action Button">
                     <button data-remote="details/' . $eligible->id . '" data-rowid="'. $eligible->id . '"
                         type="button" class="btn btn-sm btn-details btn-primary" >Details</button>
-                    </div>
+                    <br/>
                     ';
             })
-            ->rawColumns(['action','education','address','rejected'])
+            ->rawColumns(['action','education','address','rejected','eligible'])
             ->make(true);
     }
 
@@ -125,5 +135,15 @@ class EligibleCandidatesCO extends Controller
         }else{
             return 0;
         }
+    }
+
+    // MAke the candidate eligile from rejected list
+
+    public function makeEligible($id)
+    {
+        $profile= EligibleCandidate::query()->where('candidate_id',$id)->first();
+        EligibleCandidate::query()->where('candidate_id',$id)->update(['eligible'=>true, 'remarks'=>$profile->remarks.' '.'Recheck and eligible by '.Auth::id()]);
+
+        return redirect()->action('Profile\EligibleCandidatesCO@reject');
     }
 }
