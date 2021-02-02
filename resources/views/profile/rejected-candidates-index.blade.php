@@ -111,9 +111,9 @@
                     { data: 'name', name: 'name' },
                     { data: 'address', name: 'address' },
                     { data: 'pm_district.name', name: 'pm_district.name' },
-                    { data: 'eligible', name: 'eligible' },
+                    { data: 'eligibleB', name: 'eligibleB' },
                     { data: 'education', name: 'education' },
-                    { data: 'rejected', name: 'rejected' },
+                    { data: 'eligible.remarks', name: 'eligible.remarks' },
                     { data: 'action', name: 'action', orderable: false, searchable: false, printable: false}
                 ],
                 columnDefs: [

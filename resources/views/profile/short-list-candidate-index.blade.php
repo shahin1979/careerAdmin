@@ -95,7 +95,7 @@
         <table class="table table-striped table-bordered">
             <thead>
             <tr style="border-color: #0c5460">
-                <th style="width: 2%">SL</th>
+                <th style="width: 2%">ID</th>
                 <th style="width: 5%">Photo</th>
                 <th style="width: 10%">Name</th>
                 <th style="width: 15%">Address</th>
@@ -112,7 +112,7 @@
             <tbody>
             @foreach($report as $i=>$row)
                 <tr style="background-color: {!! $i%2 == 0 ? '#fcebf5' : 'rgba(44,221,32,0.1)' !!}">
-                    <td>{!! $i+1 !!}</td>
+                    <td>{!! $row->id !!}</td>
                     <td><img src="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->photo !!}" height="50px" width="50px"></td>
                     <td>{!! $row->name !!}</td>
 {{--                    <td style="width: 15%">{!! $row->pm_address !!}</td>--}}
@@ -140,7 +140,9 @@
                         </a><br/>
                         <a href="http://erecruitment.nrbglobalbank.com/careerPortal{!! $row->document[2]->document_path !!}" target = "_blank" class="dropdown-item has-icon text-danger">
                             Last
-                        </a></td>
+                        </a>
+                    </td>
+                    <td><button type="submit" value="{!! $row->id !!}" id="btn-make-eligible" class="btn btn-primary btn-make-eligible">Make Eligible</button></td>
                 </tr>
             @endforeach
             </tbody>
@@ -152,6 +154,39 @@
 
 @push('scripts')
 
+        <script>
 
+            $(document).on('click', '.btn-make-eligible', function (e) {
+                e.preventDefault();
+                var currentRow=$(this).closest("tr");
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                // confirm then
+                $.ajax({
+                    beforeSend: function (request) {
+                        return confirm("Are you sure?");
+                    },
+                    url: 'makeEligibleFromReject/'+ $(this).val(),
+                    type: 'GET',
+                    dataType: 'json',
+                    data: {method: '_GET', submit: true, remarks:$('#remarks').val()},
+
+                    error: function (request, status, error) {
+                        alert(request.responseText);
+                    },
+                    success: function (data) {
+                        currentRow.find('td').fadeOut(1000, function () {
+                            currentRow.remove();
+                        });
+                    }
+                })
+            });
+
+        </script>
 
 @endpush

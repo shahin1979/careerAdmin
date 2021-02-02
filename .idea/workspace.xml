@@ -4,7 +4,9 @@
     <list default="true" id="22ce2b0c-1d0b-41eb-8c35-9f7aaa2aac71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/EligibleCandidatesCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/EligibleCandidatesCO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Profile/ShortListCandidateCO.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Profile/ShortListCandidateCO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/rejected-candidates-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/rejected-candidates-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/short-list-candidate-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/short-list-candidate-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +232,9 @@
       <workItem from="1611211677213" duration="20000" />
       <workItem from="1611469644758" duration="1643000" />
       <workItem from="1612161943466" duration="1121000" />
-      <workItem from="1612173020821" duration="1373000" />
+      <workItem from="1612173020821" duration="1482000" />
+      <workItem from="1612239750398" duration="1359000" />
+      <workItem from="1612256518174" duration="1788000" />
     </task>
     <task id="LOCAL-00001" summary="home updated">
       <created>1608143378223</created>
@@ -435,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611485702255</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Eligible button add to rejected list">
+      <created>1612178869150</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612178869150</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +467,8 @@
     <MESSAGE value="Sorting Started" />
     <MESSAGE value="Manual verification Added" />
     <MESSAGE value="Manual verification continue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manual verification continue" />
+    <MESSAGE value="Eligible button add to rejected list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eligible button add to rejected list" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

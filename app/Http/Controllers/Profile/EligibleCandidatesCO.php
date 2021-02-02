@@ -75,7 +75,7 @@ class EligibleCandidatesCO extends Controller
     {
         $eligible = CandidatePersonal::query()->whereHas('eligible',function ($q){
             $q->where('eligible',false);
-        })->with('eligible.user','education','pm_district','pm_thana')->select('candidate_personals.*');
+        })->with('education','pm_district','pm_thana','eligible')->select('candidate_personals.*');
 
         return DataTables::of($eligible)
 
@@ -85,15 +85,15 @@ class EligibleCandidatesCO extends Controller
                 })->implode('<br>');
             })
 
-            ->addColumn('rejected', function ($eligible) {
-                return '<div class="text-danger">'. $eligible->eligible->remarks.'</div><br/>Rejected By : '.$eligible->eligible->user->name;
-            })
+//            ->addColumn('rejected', function ($eligible) {
+//                return '<div class="text-danger">'. $eligible->eligible->remarks;
+//            })
 
             ->addColumn('address', function ($eligible) {
                 return $eligible->pm_address.'<br/> Post Office : '.$eligible->pm_post_office. '<br/> Thana : '.$eligible->pm_thana->name;
             })
 
-            ->addColumn('eligible', function ($eligible) {
+            ->addColumn('eligibleB', function ($eligible) {
                 return '<div class="btn-group-sm" role="group" aria-label="Action Button">
                     <button data-remote="makeEligible/' . $eligible->id . '" data-rowid="'. $eligible->id . '"
                         type="button" class="btn btn-sm btn-details btn-danger" >Eligible</button>
@@ -108,7 +108,7 @@ class EligibleCandidatesCO extends Controller
                     <br/>
                     ';
             })
-            ->rawColumns(['action','education','address','rejected','eligible'])
+            ->rawColumns(['action','education','address','eligibleB'])
             ->make(true);
     }
 

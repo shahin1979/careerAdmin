@@ -8,8 +8,10 @@ use App\Models\Bangladesh\District;
 use App\Models\Bangladesh\PoliceStation;
 use App\Models\Education\Subject;
 use App\Models\Education\University;
+use App\Models\Examination\EligibleCandidate;
 use App\Models\Profile\CandidatePersonal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ShortListCandidateCO extends Controller
 {
@@ -184,5 +186,13 @@ class ShortListCandidateCO extends Controller
         }else{
             return 0;
         }
+    }
+
+    public function makeEligible($id)
+    {
+        $profile= EligibleCandidate::query()->where('candidate_id',$id)->first();
+        EligibleCandidate::query()->where('candidate_id',$id)->update(['eligible'=>true, 'remarks'=>$profile->remarks.' '.'Recheck and eligible by '.Auth::id()]);
+
+        return response()->json(['success'=>'Profile Send to Eligible List',2000]);
     }
 }
